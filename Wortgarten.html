@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wortgarten · German Vocabulary</title><style>
 :root{--ink:#203c33;--green:#2c604a;--paper:#f7f6ef;--line:#dddfd3}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px system-ui,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}header{padding:24px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}.brand{font:700 25px Georgia}.brand span{color:#83a46d}select,input,textarea{background:white;border:1px solid var(--line);border-radius:10px;padding:12px;color:var(--ink)}main{max-width:1200px;margin:auto;padding:50px 26px}.eyebrow{font-size:12px;letter-spacing:2px;font-weight:700;color:#6a8066}h1{font:normal clamp(38px,6vw,65px) Georgia;margin:16px 0}h1 em{color:#668647}p{line-height:1.6;color:#677369}.hero{display:flex;justify-content:space-between;gap:30px;align-items:center}.stamp{border:1px solid #c9d2be;background:#e9eedf;border-radius:50%;width:145px;height:145px;display:grid;place-content:center;text-align:center;flex-shrink:0}.stamp strong{font:44px Georgia}.tools{display:flex;gap:12px;margin:32px 0 22px;flex-wrap:wrap}.tools input{flex:1;min-width:200px}.primary{background:var(--green);color:white;border:0;border-radius:10px;padding:12px 20px}.secondary{background:transparent;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:10px 16px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}.tabs button{border:1px solid var(--line);border-radius:24px;background:transparent;padding:9px 17px;color:#617062}.tabs .active{background:var(--ink);color:white;border-color:var(--ink)}.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:27px;box-shadow:0 4px 14px #203c3304}.cardtop{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}.badges{display:flex;gap:6px;flex-wrap:wrap}.learning-label{background:#edf1f8;color:#456183}.badge{background:#e9efdf;color:#547044;border-radius:5px;padding:5px 9px;font-size:12px;font-weight:650}.card h2{font:38px Georgia;margin:20px 0 8px}.pron{font-size:14px;color:#7d877c;margin-bottom:22px}.card-date{font-size:12px;color:#677369;margin:-10px 0 20px}.meaning{display:grid;grid-template-columns:30px 1fr;gap:10px;margin:13px 0;line-height:1.5}.lang{font-size:10px;letter-spacing:1px;color:#8a9585;padding-top:4px}.example{border-top:1px solid var(--line);margin-top:22px;padding-top:18px}.example p{margin:6px 0;font-size:14px}.example .de{font-size:16px;color:var(--ink)}.actions{display:flex;gap:8px;margin-top:18px}.actions button{border:0;background:#f3f5ed;border-radius:6px;padding:6px 10px;color:#50634c;font-size:12px}.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:42px;padding-top:22px;font-size:13px;color:#7b8577}.footer button{font-size:13px}.empty{padding:45px;text-align:center;border:1px dashed #b9c6ae;border-radius:15px;grid-column:1/-1}dialog{width:min(620px,95vw);border:0;border-radius:18px;padding:30px;background:var(--paper);color:var(--ink)}dialog::backdrop{background:#142c2366}form{display:grid;gap:13px}form h2{font:30px Georgia;margin:0 0 10px}label{display:grid;gap:6px;font-size:13px}textarea{resize:vertical;min-height:65px}.row{display:flex;gap:12px}.row>*{flex:1}.end{display:flex;gap:12px;justify-content:flex-end}#notice{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:white;padding:12px 22px;border-radius:10px;display:none}@media(max-width:600px){main{padding:30px 18px}.stamp{display:none}header{padding:20px}.brand{font-size:22px}.row{flex-direction:column}}
-.source{background:#f0f3e8;border-left:3px solid #83a46d;padding:16px;margin-top:20px;border-radius:0 8px 8px 0}.source .eyebrow{font-size:10px;letter-spacing:1px}.source p{font-size:14px;margin:8px 0}.source .de{font-size:16px;color:var(--ink)}.source .context{border-top:1px solid #d9dfcc;padding-top:10px;font-size:12px}</style></head><body><header><div class="brand">Wortgarten<span> ✳</span></div><select id="locale" aria-label="Interface language"><option value="en">EN · English</option><option value="de">DE · Deutsch</option><option value="cn">CN · 中文</option></select></header><main><section class="hero"><div><div class="eyebrow">DEUTSCH · ENGLISH · 中文</div><h1 id="heading"></h1><p id="subtitle"></p></div><div class="stamp"><strong id="count">1</strong><span id="wordcount"></span></div></section><div class="tools"><input id="search" type="search"><button class="primary" id="add"></button></div><nav class="tabs" id="tabs" aria-label="Word categories"></nav><section class="cards" id="cards"></section><footer class="footer"><div id="storage"></div><div><button class="secondary" id="export"></button> <button class="secondary" id="import"></button><input id="file" type="file" accept="application/json" hidden></div></footer></main><dialog id="editor"><form id="form"><h2 id="formtitle"></h2><div class="row"><label><span data-t="word"></span><input name="word" required maxlength="120"></label><label><span data-t="category"></span><select name="type"></select></label></div><label><span data-t="addedOn"></span><input name="addedOn" type="date"></label><label><span data-t="learningLabel"></span><input name="learningLabel" maxlength="120"></label><label><span data-t="pronunciation"></span><input name="pron" maxlength="150"></label><label>EN<input name="en" required maxlength="1500"></label><label>中文<input name="cn" required maxlength="1500"></label><label><span data-t="examplede"></span><textarea name="de" required maxlength="2000"></textarea></label><label><span data-t="exampleen"></span><textarea name="exen" maxlength="2000"></textarea></label><label><span data-t="examplecn"></span><textarea name="excn" maxlength="2000"></textarea></label><label><span data-t="sourceDe"></span><textarea name="sourceDe" maxlength="2000"></textarea></label><label><span data-t="sourceEn"></span><textarea name="sourceEn" maxlength="2000"></textarea></label><label><span data-t="sourceCn"></span><textarea name="sourceCn" maxlength="2000"></textarea></label><div class="end"><button type="button" class="secondary" id="cancel"></button><button class="primary" id="save"></button></div></form></dialog><div id="notice" role="status"></div><script type="application/json" id="vocabulary-data">
+.source{background:#f0f3e8;border-left:3px solid #83a46d;padding:16px;margin-top:20px;border-radius:0 8px 8px 0}.source .eyebrow{font-size:10px;letter-spacing:1px}.source p{font-size:14px;margin:8px 0}.source .de{font-size:16px;color:var(--ink)}.source .context{border-top:1px solid #d9dfcc;padding-top:10px;font-size:12px}.search-filters{margin:-8px 0 12px;border:1px solid var(--line);border-radius:10px;background:#ffffff80}.search-filters summary{padding:12px 16px;cursor:pointer;font-size:14px}.filter-fields{display:grid;grid-template-columns:1fr 1fr 1.2fr auto;gap:12px;align-items:end;padding:4px 16px 16px}.filter-fields input,.filter-fields select{width:100%;min-width:0}.search-results{font-size:13px;margin:12px 0 18px}.filter-error{color:#983e2f;font-size:13px;margin:0 16px 16px}@media(max-width:700px){.filter-fields{grid-template-columns:1fr 1fr}.filter-fields>*{min-width:0}}@media(max-width:420px){.filter-fields{grid-template-columns:1fr}}</style></head><body><header><div class="brand">Wortgarten<span> ✳</span></div><select id="locale" aria-label="Interface language"><option value="en">EN · English</option><option value="de">DE · Deutsch</option><option value="cn">CN · 中文</option></select></header><main><section class="hero"><div><div class="eyebrow">DEUTSCH · ENGLISH · 中文</div><h1 id="heading"></h1><p id="subtitle"></p></div><div class="stamp"><strong id="count">1</strong><span id="wordcount"></span></div></section><div class="tools"><input id="search" type="search"><button class="primary" id="add"></button></div><details id="search-filters" class="search-filters"><summary><span data-t="filters"></span><span id="filter-status"></span></summary><div class="filter-fields"><label><span data-t="dateFrom"></span><input id="filter-from" type="date"></label><label><span data-t="dateTo"></span><input id="filter-to" type="date"></label><label><span data-t="filterSource"></span><select id="filter-source"></select></label><button id="clear-filters" class="secondary" type="button" data-t="clearFilters"></button></div><p id="filter-error" class="filter-error" role="status" hidden></p></details><p id="search-results" class="search-results" role="status"></p><nav class="tabs" id="tabs" aria-label="Word categories"></nav><section class="cards" id="cards"></section><footer class="footer"><div id="storage"></div><div><button class="secondary" id="export"></button> <button class="secondary" id="import"></button><input id="file" type="file" accept="application/json" hidden></div></footer></main><dialog id="editor"><form id="form"><h2 id="formtitle"></h2><div class="row"><label><span data-t="word"></span><input name="word" required maxlength="120"></label><label><span data-t="category"></span><select name="type"></select></label></div><label><span data-t="addedOn"></span><input name="addedOn" type="date"></label><label><span data-t="learningLabel"></span><input name="learningLabel" maxlength="120"></label><label><span data-t="pronunciation"></span><input name="pron" maxlength="150"></label><label>EN<input name="en" required maxlength="1500"></label><label>中文<input name="cn" required maxlength="1500"></label><label><span data-t="examplede"></span><textarea name="de" required maxlength="2000"></textarea></label><label><span data-t="exampleen"></span><textarea name="exen" maxlength="2000"></textarea></label><label><span data-t="examplecn"></span><textarea name="excn" maxlength="2000"></textarea></label><label><span data-t="sourceDe"></span><textarea name="sourceDe" maxlength="2000"></textarea></label><label><span data-t="sourceEn"></span><textarea name="sourceEn" maxlength="2000"></textarea></label><label><span data-t="sourceCn"></span><textarea name="sourceCn" maxlength="2000"></textarea></label><div class="end"><button type="button" class="secondary" id="cancel"></button><button class="primary" id="save"></button></div></form></dialog><div id="notice" role="status"></div><script type="application/json" id="vocabulary-data">
 [
   {
     "id": "bewegt-adj",
@@ -15,7 +15,8 @@
     "sourceDe": "Die Geschichte der deutschen Hauptstadt hat die Welt bewegt.",
     "sourceEn": "The history of the German capital has moved the world.",
     "sourceCn": "德国首都的历史触动了全世界。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "bewegt-verb",
@@ -30,7 +31,8 @@
     "sourceDe": "Die Geschichte der deutschen Hauptstadt hat die Welt bewegt.",
     "sourceEn": "The history of the German capital has moved the world.",
     "sourceCn": "德国首都的历史触动了全世界。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "wiedervereinigung-noun",
@@ -45,7 +47,8 @@
     "sourceDe": "Seit der Wiedervereinigung hat sich Berlin zu einer lebendigen und weltoffenen Metropole entwickelt.",
     "sourceEn": "Since reunification, Berlin has developed into a lively and cosmopolitan metropolis.",
     "sourceCn": "自德国重新统一以来，柏林已发展成为一座充满活力、开放包容的大都市。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "lebendig-adj",
@@ -60,7 +63,8 @@
     "sourceDe": "Seit der Wiedervereinigung hat sich Berlin zu einer lebendigen und weltoffenen Metropole entwickelt.",
     "sourceEn": "Since reunification, Berlin has developed into a lively and cosmopolitan metropolis.",
     "sourceCn": "自德国重新统一以来，柏林已发展成为一座充满活力、开放包容的大都市。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "entwickeln-verb",
@@ -75,7 +79,8 @@
     "sourceDe": "Seit der Wiedervereinigung hat sich Berlin zu einer lebendigen und weltoffenen Metropole entwickelt.",
     "sourceEn": "Since reunification, Berlin has developed into a lively and cosmopolitan metropolis.",
     "sourceCn": "自德国重新统一以来，柏林已发展成为一座充满活力、开放包容的大都市。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "koenigreich-noun",
@@ -90,7 +95,8 @@
     "sourceDe": "Im 18. Jahrhundert war Berlin die Hauptstadt des Königreichs Preussen.",
     "sourceEn": "In the 18th century, Berlin was the capital of the Kingdom of Prussia.",
     "sourceCn": "在18世纪，柏林是普鲁士王国的首都。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "praegen-verb",
@@ -105,7 +111,8 @@
     "sourceDe": "Der Architekt Karl Friedrich Schinkel (1781–1841) prägte das Stadtbild durch seine klassizistischen Bauten.",
     "sourceEn": "The architect Karl Friedrich Schinkel (1781–1841) shaped the cityscape through his neoclassical buildings.",
     "sourceCn": "建筑师卡尔·弗里德里希·申克尔（1781—1841）以其新古典主义建筑塑造了城市风貌。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "diskothek-noun",
@@ -120,7 +127,8 @@
     "sourceDe": "Diskotheken wie das Berghain, watergate und Kater Holyig locken ebenso junge Touristen an wie die grossen Event: der Karneval der Kulturen, die Fete de la Musique, der Berlin'Marathon and Fussballspiele im Olympiastadion",
     "sourceEn": "Nightclubs such as Berghain, Watergate and Kater Holyig attract young tourists, just as major events do: the Carnival of Cultures, Fête de la Musique, the Berlin Marathon and football matches at the Olympic Stadium.",
     "sourceCn": "像 Berghain、Watergate 和Kater Holyig一样，各大活动也吸引着年轻游客：文化狂欢节、音乐节、柏林马拉松以及奥林匹克体育场的足球比赛。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "anlocken-verb",
@@ -135,7 +143,8 @@
     "sourceDe": "Diskotheken wie das Berghain, watergate und Kater Holyig locken ebenso junge Touristen an wie die grossen Event: der Karneval der Kulturen, die Fete de la Musique, der Berlin'Marathon and Fussballspiele im Olympiastadion",
     "sourceEn": "Nightclubs such as Berghain, Watergate and Kater Holyig attract young tourists, just as major events do: the Carnival of Cultures, Fête de la Musique, the Berlin Marathon and football matches at the Olympic Stadium.",
     "sourceCn": "像 Berghain、Watergate 和Kater Holyig一样，各大活动也吸引着年轻游客：文化狂欢节、音乐节、柏林马拉松以及奥林匹克体育场的足球比赛。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "ebenso-adv",
@@ -150,7 +159,8 @@
     "sourceDe": "Diskotheken wie das Berghain, watergate und Kater Holyig locken ebenso junge Touristen an wie die grossen Event: der Karneval der Kulturen, die Fete de la Musique, der Berlin'Marathon and Fussballspiele im Olympiastadion",
     "sourceEn": "Nightclubs such as Berghain, Watergate and Kater Holyig attract young tourists, just as major events do: the Carnival of Cultures, Fête de la Musique, the Berlin Marathon and football matches at the Olympic Stadium.",
     "sourceCn": "像 Berghain、Watergate 和Kater Holyig一样，各大活动也吸引着年轻游客：文化狂欢节、音乐节、柏林马拉松以及奥林匹克体育场的足球比赛。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "fete-noun",
@@ -165,7 +175,8 @@
     "sourceDe": "Diskotheken wie das Berghain, watergate und Kater Holyig locken ebenso junge Touristen an wie die grossen Event: der Karneval der Kulturen, die Fete de la Musique, der Berlin'Marathon and Fussballspiele im Olympiastadion",
     "sourceEn": "Nightclubs such as Berghain, Watergate and Kater Holyig attract young tourists, just as major events do: the Carnival of Cultures, Fête de la Musique, the Berlin Marathon and football matches at the Olympic Stadium.",
     "sourceCn": "像 Berghain、Watergate 和Kater Holyig一样，各大活动也吸引着年轻游客：文化狂欢节、音乐节、柏林马拉松以及奥林匹克体育场的足球比赛。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "rheinisch-adj",
@@ -180,7 +191,8 @@
     "sourceDe": "Die Einwohner sind als „rheinische Frohnaturen“ bekannt: offen, freundlich und lustig.",
     "sourceEn": "The residents are known as “cheerful Rhinelanders”: open, friendly and cheerful.",
     "sourceCn": "当地居民以“莱茵地区的乐天派”著称：开放、友善、风趣开朗。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "frohnatur-noun",
@@ -195,7 +207,8 @@
     "sourceDe": "Die Einwohner sind als „rheinische Frohnaturen“ bekannt: offen, freundlich und lustig.",
     "sourceEn": "The residents are known as “cheerful Rhinelanders”: open, friendly and cheerful.",
     "sourceCn": "当地居民以“莱茵地区的乐天派”著称：开放、友善、风趣开朗。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "lustig-adj",
@@ -210,7 +223,8 @@
     "sourceDe": "Die Einwohner sind als „rheinische Frohnaturen“ bekannt: offen, freundlich und lustig.",
     "sourceEn": "The residents are known as “cheerful Rhinelanders”: open, friendly and cheerful.",
     "sourceCn": "当地居民以“莱茵地区的乐天派”著称：开放、友善、风趣开朗。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "zeigen-verb",
@@ -225,7 +239,8 @@
     "sourceDe": "Das zeigen die Kölner vor allem beim Karneval.",
     "sourceEn": "The people of Cologne show this especially during Carnival.",
     "sourceCn": "科隆人尤其在狂欢节期间表现出这些特质。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "rosenmontag-noun",
@@ -240,7 +255,8 @@
     "sourceDe": "Der Höhepunkt des Karnevals ist der Festzug am Rosenmontag im Februar.",
     "sourceEn": "The highlight of Carnival is the parade on Rose Monday in February.",
     "sourceCn": "狂欢节的高潮是二月玫瑰星期一当天的游行。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "ausserhalb-prep",
@@ -255,7 +271,8 @@
     "sourceDe": "Auch ausserhalb des Karnevals ist die Stadt eine Reise wert.",
     "sourceEn": "The city is worth a visit even outside the Carnival season.",
     "sourceCn": "即使不在狂欢节期间，这座城市也值得一游。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "eine-reise-wert-phrase",
@@ -270,7 +287,8 @@
     "sourceDe": "Auch ausserhalb des Karnevals ist die Stadt eine Reise wert.",
     "sourceEn": "The city is worth a visit even outside the Carnival season.",
     "sourceCn": "即使不在狂欢节期间，这座城市也值得一游。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "siedeln-verb",
@@ -285,7 +303,8 @@
     "sourceDe": "Schon vor 2000 Jahren siedelten dort die Römer.",
     "sourceEn": "The Romans settled there as early as 2,000 years ago.",
     "sourceCn": "早在两千年前，古罗马人就在那儿定居了。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "spur-noun",
@@ -300,7 +319,8 @@
     "sourceDe": "Ihre Spuren findet man in der Innenstadt und im Römisch-Germanischen Museum neben dem Dom.",
     "sourceEn": "Traces of them can be found in the city centre and in the Romano-Germanic Museum next to the cathedral.",
     "sourceCn": "在市中心以及大教堂旁的罗马日耳曼博物馆里，可以找到古罗马人留下的痕迹。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "gegenwart-noun",
@@ -315,7 +335,8 @@
     "sourceDe": "Gleich gegenüber ist das Museum Ludwig, eine der bedeutendsten Kunstsammlungen der Gegenwart.",
     "sourceEn": "Directly opposite is Museum Ludwig, one of the most important art collections of our time.",
     "sourceCn": "正对面就是路德维希博物馆，其艺术收藏是当代最重要的艺术收藏之一。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "hineinspringen-verb",
@@ -330,7 +351,8 @@
     "sourceDe": "Als ich die Autotür öffnete, sprang er sofort hinein.",
     "sourceEn": "When I opened the car door, he immediately jumped in.",
     "sourceCn": "我一打开车门，他就立刻跳了进去。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "um-zu-infinitive-pattern",
@@ -345,7 +367,8 @@
     "sourceDe": "Mehr als 12 Millionen Touristen aus dem In- und Ausland kommen jedes Jahr, um Berlin zu besuchen.",
     "sourceEn": "Every year, more than 12 million tourists from Germany and abroad come to visit Berlin.",
     "sourceCn": "每年有超过1200万名来自德国国内外的游客前来游览柏林。",
-    "learningLabel": "B1"
+    "learningLabel": "B1",
+    "addedOn": "2026-10-17"
   },
   {
     "id": "vor-allem-phrase",
@@ -360,7 +383,8 @@
     "excn": "我喜欢听音乐，尤其是爵士乐。\n学德语时，我尤其想练习口语。\n运动很重要，尤其对健康而言。\n现在我最需要的是安静。",
     "sourceDe": "Das zeigen die Kölner vor allem beim Karneval.",
     "sourceEn": "The people of Cologne show this especially during Carnival.",
-    "sourceCn": "科隆人尤其在狂欢节期间表现出这一点。"
+    "sourceCn": "科隆人尤其在狂欢节期间表现出这一点。",
+    "addedOn": "2026-10-17"
   }
 ]
 </script>
@@ -373,6 +397,12 @@ Object.assign(copy.cn,{source:'我在哪里学到这个词',sourceDe:'来源句�
 const learnedSource={sourceDe:'Die Geschichte der deutschen Hauptstadt hat die Welt bewegt.',sourceEn:'The history of the German capital has moved the world.',sourceCn:'德国首都的历史触动了全世界。'};
 const seed=JSON.parse(document.getElementById('vocabulary-data').textContent);
 let words=seed,lang='en',filter='all',editing=null;try{words=JSON.parse(localStorage.getItem('wortgarten-offline-words'))||seed;lang=localStorage.getItem('wortgarten-offline-lang')||'en'}catch{}if(!copy[lang])lang='en';
+// User-selected starting date: apply once to current browser cards, including personal additions.
+try{if(!localStorage.getItem('wortgarten-start-date-2026-10-17')){
+for(const w of words)w.addedOn='2026-10-17';
+localStorage.setItem('wortgarten-offline-words',JSON.stringify(words));
+localStorage.setItem('wortgarten-start-date-2026-10-17','done');
+}}catch{}
 // Merge newly embedded cards once; keep user edits and remember deleted cards.
 try{const known=new Set(JSON.parse(localStorage.getItem('wortgarten-offline-embedded-ids'))||words.map(w=>w.id));for(const item of seed){if(!known.has(item.id)&&!words.some(w=>w.id===item.id))words.push({...item});known.add(item.id);}localStorage.setItem('wortgarten-offline-words',JSON.stringify(words));localStorage.setItem('wortgarten-offline-embedded-ids',JSON.stringify([...known]));}catch{}
 
@@ -410,6 +440,28 @@ Object.assign(copy.cn,{learningLabel:'学习来源 / 标签（选填）'});
 Object.assign(copy.en,{addedOn:'Added on',dateUnknown:'Unknown'});
 Object.assign(copy.de,{addedOn:'Hinzugefügt am',dateUnknown:'Unbekannt'});
 Object.assign(copy.cn,{addedOn:'添加日期',dateUnknown:'未知'});
+Object.assign(copy.en,{filters:'Filters',dateFrom:'Added from',dateTo:'Added until',filterSource:'Learning source',allSources:'All sources',noSource:'No label',clearFilters:'Clear filters',activeFilters:'active',results:'Showing {n} of {total} words',dateRangeError:'The start date must be on or before the end date.'});
+Object.assign(copy.de,{filters:'Filter',dateFrom:'Hinzugefügt ab',dateTo:'Hinzugefügt bis',filterSource:'Lernquelle',allSources:'Alle Quellen',noSource:'Ohne Label',clearFilters:'Filter zurücksetzen',activeFilters:'aktiv',results:'{n} von {total} Wörtern',dateRangeError:'Das Startdatum muss vor oder am Enddatum liegen.'});
+Object.assign(copy.cn,{filters:'筛选',dateFrom:'添加起始日期',dateTo:'添加截止日期',filterSource:'学习来源',allSources:'全部来源',noSource:'无标签',clearFilters:'清除筛选',activeFilters:'项已启用',results:'显示 {n} / {total} 个单词',dateRangeError:'起始日期不能晚于截止日期。'});
+let sourceFilter='';
+function renderSearchFilters(){
+const labels=[...new Set(words.map(w=>(w.learningLabel||'').trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+if(sourceFilter.startsWith('label:')&&!labels.includes(sourceFilter.slice(6)))labels.push(sourceFilter.slice(6));
+$('#filter-source').innerHTML=`<option value="">${t('allSources')}</option><option value="unlabelled">${t('noSource')}</option>`+labels.map(label=>`<option value="${esc('label:'+label)}">${esc(label)}</option>`).join('');
+$('#filter-source').value=sourceFilter;
+const from=$('#filter-from').value,to=$('#filter-to').value;
+const active=Number(Boolean(from))+Number(Boolean(to))+Number(Boolean(sourceFilter));
+$('#filter-status').textContent=active?` · ${active} ${t('activeFilters')}`:'';
+$('#filter-error').hidden=!(from&&to&&from>to);
+$('#filter-error').textContent=t('dateRangeError');
+return {from,to};
+}
+function matchesSearchFilters(w,from,to){
+if((from||to)&&!validAddedOn(w.addedOn))return false;
+if(from&&w.addedOn<from||to&&w.addedOn>to)return false;
+const label=(w.learningLabel||'').trim();
+return !sourceFilter||(sourceFilter==='unlabelled'?!label:label===sourceFilter.slice(6));
+}
 // Store calendar dates rather than UTC timestamps so a word keeps its original day.
 function today(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
 function validAddedOn(value){if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(value)||Number(value.slice(0,4))===0)return false;const date=new Date(value+'T12:00:00Z');return !isNaN(date)&&date.toISOString().slice(0,10)===value}
@@ -417,8 +469,11 @@ function addedOnText(value){return validAddedOn(value)?new Intl.DateTimeFormat(l
 const t=k=>copy[lang][k]||k,esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function notice(s){$('#notice').textContent=s;$('#notice').style.display='block';setTimeout(()=>$('#notice').style.display='none',3500)}
 function persist(){try{localStorage.setItem('wortgarten-offline-words',JSON.stringify(words));return true}catch{notice(t('failed'));return false}}
-function render(){document.documentElement.lang=lang==='cn'?'zh-CN':lang;$('#locale').value=lang;$('#heading').innerHTML=t('heading');for(const id of ['subtitle','wordcount','add','storage','export','import','cancel','save'])$('#'+id).textContent=t(id);$('#search').placeholder=t('search');document.querySelectorAll('[data-t]').forEach(e=>e.textContent=t(e.dataset.t));$('#count').textContent=words.length;$('#tabs').innerHTML=types.map(x=>`<button class="${x===filter?'active':''}" data-filter="${x}" aria-pressed="${x===filter}">${t(x)} <small>${x==='all'?words.length:words.filter(w=>w.type===x).length}</small></button>`).join('');const q=$('#search').value.toLocaleLowerCase();const selected=words.filter(w=>(filter==='all'||w.type===filter)&&Object.values(w).join(' ').toLocaleLowerCase().includes(q));$('#cards').innerHTML=selected.length?selected.map(w=>`<article class="card"><div class="cardtop"><div class="badges"><span class="badge">${t(w.type)}</span>${w.learningLabel?`<span class="badge learning-label" title="${esc(t('learningLabel'))}">${esc(w.learningLabel)}</span>`:''}</div><span class="eyebrow">DE / EN / CN</span></div><h2 lang="de">${esc(w.word)}</h2><div class="pron">${esc(w.pron)}</div><div class="card-date">${t('addedOn')}: ${validAddedOn(w.addedOn)?`<time datetime="${esc(w.addedOn)}">${esc(addedOnText(w.addedOn))}</time>`:esc(t('dateUnknown'))}</div><div class="meaning"><span class="lang">EN</span><span lang="en">${esc(w.en)}</span></div><div class="meaning"><span class="lang">CN</span><span lang="zh-CN">${esc(w.cn)}</span></div>${w.sourceDe?`<div class="source"><div class="eyebrow">${t('source')}</div><p class="de" lang="de">${esc(w.sourceDe)}</p><p lang="en">${esc(w.sourceEn)}</p><p lang="zh-CN">${esc(w.sourceCn)}</p>${w.sourceDe===learnedSource.sourceDe?`<p class="context">${t('context')}</p>`:''}</div>`:''}<div class="example"><p class="de" lang="de">${esc(w.de).replace(/\n/g,'<br>')}</p><p lang="en">${esc(w.exen).replace(/\n/g,'<br>')}</p><p lang="zh-CN">${esc(w.excn).replace(/\n/g,'<br>')}</p></div><div class="actions"><button data-action="listen" data-id="${esc(w.id)}">♫ ${t('listen')}</button><button data-action="edit" data-id="${esc(w.id)}">${t('editbtn')}</button><button data-action="remove" data-id="${esc(w.id)}">${t('remove')}</button></div></article>`).join(''):`<div class="empty">${t('empty')}</div>`}
+function render(){document.documentElement.lang=lang==='cn'?'zh-CN':lang;$('#locale').value=lang;$('#heading').innerHTML=t('heading');for(const id of ['subtitle','wordcount','add','storage','export','import','cancel','save'])$('#'+id).textContent=t(id);$('#search').placeholder=t('search');document.querySelectorAll('[data-t]').forEach(e=>e.textContent=t(e.dataset.t));$('#count').textContent=words.length;$('#tabs').innerHTML=types.map(x=>`<button class="${x===filter?'active':''}" data-filter="${x}" aria-pressed="${x===filter}">${t(x)} <small>${x==='all'?words.length:words.filter(w=>w.type===x).length}</small></button>`).join('');const {from,to}=renderSearchFilters();const q=$('#search').value.toLocaleLowerCase();const selected=words.filter(w=>(filter==='all'||w.type===filter)&&matchesSearchFilters(w,from,to)&&Object.values(w).join(' ').toLocaleLowerCase().includes(q));$('#search-results').textContent=t('results').replace('{n}',selected.length).replace('{total}',words.length);$('#cards').innerHTML=selected.length?selected.map(w=>`<article class="card"><div class="cardtop"><div class="badges"><span class="badge">${t(w.type)}</span>${w.learningLabel?`<span class="badge learning-label" title="${esc(t('learningLabel'))}">${esc(w.learningLabel)}</span>`:''}</div><span class="eyebrow">DE / EN / CN</span></div><h2 lang="de">${esc(w.word)}</h2><div class="pron">${esc(w.pron)}</div><div class="card-date">${t('addedOn')}: ${validAddedOn(w.addedOn)?`<time datetime="${esc(w.addedOn)}">${esc(addedOnText(w.addedOn))}</time>`:esc(t('dateUnknown'))}</div><div class="meaning"><span class="lang">EN</span><span lang="en">${esc(w.en)}</span></div><div class="meaning"><span class="lang">CN</span><span lang="zh-CN">${esc(w.cn)}</span></div>${w.sourceDe?`<div class="source"><div class="eyebrow">${t('source')}</div><p class="de" lang="de">${esc(w.sourceDe)}</p><p lang="en">${esc(w.sourceEn)}</p><p lang="zh-CN">${esc(w.sourceCn)}</p>${w.sourceDe===learnedSource.sourceDe?`<p class="context">${t('context')}</p>`:''}</div>`:''}<div class="example"><p class="de" lang="de">${esc(w.de).replace(/\n/g,'<br>')}</p><p lang="en">${esc(w.exen).replace(/\n/g,'<br>')}</p><p lang="zh-CN">${esc(w.excn).replace(/\n/g,'<br>')}</p></div><div class="actions"><button data-action="listen" data-id="${esc(w.id)}">♫ ${t('listen')}</button><button data-action="edit" data-id="${esc(w.id)}">${t('editbtn')}</button><button data-action="remove" data-id="${esc(w.id)}">${t('remove')}</button></div></article>`).join(''):`<div class="empty">${t('empty')}</div>`}
 function openEditor(w){editing=w?.id||null;$('#form').reset();$('#form').elements.addedOn.value=w?(validAddedOn(w.addedOn)?w.addedOn:''):today();$('#formtitle').textContent=t(w?'edit':'new');$('#form select').innerHTML=types.slice(1).map(x=>`<option value="${x}">${t(x)}</option>`).join('');if(w)Object.entries(w).forEach(([k,v])=>{if($('#form').elements[k])$('#form').elements[k].value=v});$('#editor').showModal()}
+$('#filter-from').oninput=render;$('#filter-to').oninput=render;
+$('#filter-source').onchange=e=>{sourceFilter=e.target.value;render()};
+$('#clear-filters').onclick=()=>{$('#filter-from').value='';$('#filter-to').value='';sourceFilter='';render()};
 $('#locale').onchange=e=>{lang=e.target.value;try{localStorage.setItem('wortgarten-offline-lang',lang)}catch{}render()};$('#search').oninput=render;$('#tabs').onclick=e=>{const b=e.target.closest('[data-filter]');if(b){filter=b.dataset.filter;render()}};$('#add').onclick=()=>openEditor();$('#cancel').onclick=()=>$('#editor').close();$('#form').onsubmit=e=>{e.preventDefault();const w=Object.fromEntries(new FormData(e.target));for(const k in w)w[k]=w[k].trim();if(!w.word||!w.en||!w.cn||!w.de)return;if(w.addedOn&&!validAddedOn(w.addedOn))return;if(!editing&&!w.addedOn)w.addedOn=today();w.id=editing||crypto.randomUUID();if(editing)words=words.map(x=>x.id===editing?w:x);else words.unshift(w);const ok=persist();$('#editor').close();render();if(ok)notice(t('saved'))};$('#cards').onclick=e=>{const b=e.target.closest('[data-action]');if(!b)return;const w=words.find(x=>x.id===b.dataset.id);if(b.dataset.action==='edit')openEditor(w);if(b.dataset.action==='remove'&&confirm(t('confirm'))){words=words.filter(x=>x.id!==w.id);persist();render()}if(b.dataset.action==='listen'){if(!window.speechSynthesis){notice(t('speech'));return}speechSynthesis.cancel();const utter=new SpeechSynthesisUtterance(w.word);utter.lang='de-DE';utter.rate=.85;speechSynthesis.speak(utter)}};
 $('#export').onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify({version:1,words},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='wortgarten-offline-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};$('#import').onclick=()=>$('#file').click();$('#file').onchange=async e=>{try{const f=e.target.files[0];if(!f)return;if(f.size>5e6)throw Error();const data=JSON.parse(await f.text());if(!Array.isArray(data.words)||data.words.length>10000)throw Error();const incoming=data.words.map(w=>{if(!w||!types.slice(1).includes(w.type)||['word','en','cn','de'].some(k=>typeof w[k]!=='string'||!w[k].trim()))throw Error();if(w.addedOn!=null&&w.addedOn!==''&&!validAddedOn(w.addedOn))throw Error();const clean={id:crypto.randomUUID(),type:w.type,addedOn:w.addedOn||''};for(const k of ['word','en','cn','de','pron','exen','excn','sourceDe','sourceEn','sourceCn','learningLabel']){if(w[k]!=null&&typeof w[k]!=='string')throw Error();clean[k]=(w[k]||'').slice(0,3000)}return clean});const keys=new Set(words.map(w=>w.word+'|'+w.type));for(const w of incoming){const key=w.word+'|'+w.type;if(!keys.has(key)){words.push(w);keys.add(key)}}persist();render();notice(t('imported'))}catch{notice(t('bad'))}e.target.value=''};render();
 

@@ -8,7 +8,7 @@ For offline use, download `Wortgarten.html` and open it in a modern browser. No 
 
 The online version is deployed with GitHub Pages after Pages is enabled for this repository.
 
-New words automatically record their local **Added on** date. You can adjust it in the word editor. Editing and backup transfers preserve the date. Older words without a recorded date show **Unknown** until you enter one.
+New words automatically record their local **Added on** date. You can adjust it in the word editor. Editing and backup transfers preserve the date. All words present at the start of date tracking use **17 October 2026**, including existing browser-saved words (applied once). Later additions retain their own dates. Open **Filters** below the search box to combine an inclusive date range with a learning-source label, category, and text search. Source options update automatically as you add labels.
 
 ## Your words and backups
 
