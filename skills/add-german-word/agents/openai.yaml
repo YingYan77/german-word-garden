@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add German Word"
+  short_description: "Add trilingual cards to offline Wortgarten"
+  default_prompt: "Use $add-german-word to add a German word and its source sentence to my offline Wortgarten HTML."
