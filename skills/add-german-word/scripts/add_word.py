@@ -2,6 +2,7 @@
 """Embed a vocabulary card in a standalone Wortgarten HTML file."""
 import argparse, json, re, shutil
 from pathlib import Path
+from datetime import date
 PATTERN = re.compile(r'(<script type="application/json" id="vocabulary-data">\s*)(.*?)(\s*</script>)', re.S)
 TYPES = {'adj','noun','verb','adv','prep','other'}
 def add_word(html_path, card_path):
@@ -12,11 +13,16 @@ def add_word(html_path, card_path):
             raise ValueError(f'Required nonempty string: {key}')
     if card['type'] not in TYPES:
         raise ValueError('type must be adj, noun, verb, adv, prep or other')
-    fields = {'id','word','type','pron','en','cn','de','exen','excn','sourceDe','sourceEn','sourceCn','learningLabel'}
+    fields = {'id','word','type','pron','en','cn','de','exen','excn','sourceDe','sourceEn','sourceCn','learningLabel','addedOn'}
     if set(card)-fields:
         raise ValueError(f'Unknown fields: {set(card)-fields}')
     if any(not isinstance(value,str) for value in card.values()):
         raise ValueError('All field values must be strings')
+    if card.get('addedOn'):
+        if date.fromisoformat(card['addedOn']).isoformat() != card['addedOn']:
+            raise ValueError('addedOn must be YYYY-MM-DD')
+    else:
+        card['addedOn'] = date.today().isoformat()
     text = path.read_text(encoding='utf-8')
     match = PATTERN.search(text)
     if not match:

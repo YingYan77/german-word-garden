@@ -20,7 +20,8 @@ Locate the user-provided `Wortgarten.html` or ask for the local file if unavaila
 ## Card schema
 
 Required strings: `id`, `word`, `type`, `en`, `cn`, `de`.
-Optional strings: `pron`, `exen`, `excn`, `sourceDe`, `sourceEn`, `sourceCn`.
+Optional strings: `pron`, `exen`, `excn`, `sourceDe`, `sourceEn`, `sourceCn`, `learningLabel`, `addedOn`.
+Use `addedOn` as a calendar date (`YYYY-MM-DD`); the helper defaults new cards to the current local date. Preserve it when editing.
 Category: `adj`, `noun`, `verb`, `adv`, `prep`, `other`.
 Use `\n` within the example strings to pair multiple examples in the same order.
 

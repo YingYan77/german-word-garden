@@ -8,6 +8,8 @@ For offline use, download `Wortgarten.html` and open it in a modern browser. No 
 
 The online version is deployed with GitHub Pages after Pages is enabled for this repository.
 
+New words automatically record their local **Added on** date. You can adjust it in the word editor. Editing and backup transfers preserve the date. Older words without a recorded date show **Unknown** until you enter one.
+
 ## Your words and backups
 
 Words added or edited in the app are saved in that browser's local storage. They are not committed to Git, uploaded to GitHub, or synchronized across devices. The local HTML and the online site use separate storage.
