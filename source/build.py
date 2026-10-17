@@ -23,7 +23,7 @@ def build(output=None):
     if template.count('<!-- WORTGARTEN_SCRIPTS -->')!=1:
         raise ValueError('Template must contain one WORTGARTEN_SCRIPTS marker')
     data=json.dumps(words,ensure_ascii=False,indent=2).replace('<',r'\u003c')
-    js=(source/'app.js').read_text(encoding='utf-8')
+    js=(source/'app.js').read_text(encoding='utf-8')+'\n'+(source/'quiz.js').read_text(encoding='utf-8')
     if '</script' in js.lower():
         raise ValueError('Escape literal closing script tags in app.js before embedding')
     scripts='<script type="application/json" id="vocabulary-data">\n'+data+'\n</script>\n<script>\n'+js+'\n</script>'

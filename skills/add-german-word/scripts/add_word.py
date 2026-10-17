@@ -13,7 +13,7 @@ def add_word(html_path, card_path):
             raise ValueError(f'Required nonempty string: {key}')
     if card['type'] not in TYPES:
         raise ValueError('type must be adj, noun, verb, adv, prep or other')
-    fields = {'id','word','type','pron','en','cn','de','exen','excn','sourceDe','sourceEn','sourceCn','learningLabel','addedOn'}
+    fields = {'id','word','type','pron','en','cn','de','exen','excn','sourceDe','sourceEn','sourceCn','learningLabel','addedOn','quizDe','quizEn','quizCn','verbPresent','verbPast','verbPerfect'}
     if set(card)-fields:
         raise ValueError(f'Unknown fields: {set(card)-fields}')
     if any(not isinstance(value,str) for value in card.values()):
