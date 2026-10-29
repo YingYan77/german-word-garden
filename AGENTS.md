@@ -1,5 +1,7 @@
 # Wortgarten — offline German vocabulary
 
+Project mode: git-mastered without bridge. GitHub Pages publishes this website from main; there is no Overleaf connection.
+
 1. Extract this ZIP into a folder on your computer.
 2. Double-click Wortgarten.html to open it in Chrome, Edge, Firefox or Safari.
    No installation, internet connection or account is needed for the vocabulary notebook.

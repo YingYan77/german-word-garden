@@ -37,11 +37,12 @@ test('every existing word has concise answers and both translation directions',(
  assert.ok(seed.every(w=>w.quizDe&&w.quizEn&&w.quizCn));
  const q=app.run("makeQuestions(words,'meaningToDe','cn')[0]");assert.equal(q.promptLang,'zh-CN');assert.ok(!q.prompt.includes(q.answers[0]));
 });
-test('all seven verbs have three complete tense tests, including separable and reflexive forms',()=>{
- const app=boot(),verbs=seed.filter(w=>w.type==='verb');assert.equal(verbs.length,7);
+test('all verbs have three complete tense tests, including separable and reflexive forms',()=>{
+ const app=boot(),verbs=seed.filter(w=>w.type==='verb');assert.ok(verbs.length>=7);
  assert.equal(app.run("makeQuestions(words,'verbs','en').length"),verbs.length*3);
  assert.equal(seed.find(w=>w.id==='hineinspringen-verb').verbPerfect,'er ist hineingesprungen');
  assert.equal(seed.find(w=>w.id==='entwickeln-verb').verbPast,'er entwickelte sich');
+ assert.equal(seed.find(w=>w.id==='sich-treffen-verb').verbPerfect,'er hat sich getroffen');
 });
 test('question builder never invents missing verb forms',()=>{
  const app=boot();assert.equal(app.run("makeQuestions([{word:'testen',type:'verb',en:'test',cn:'测试'}],'verbs','en').length"),0);
@@ -168,4 +169,20 @@ test('practice on an empty selection leaves current records unchanged',()=>{
 test('switching panes preserves an unfinished answer and keeps notebook hints hidden',()=>{
  const app=boot();app.run('startQuiz()');app.get('#quiz-answer').value='unfinished';app.run("setPane('progress');setPane('practice')");
  assert.equal(app.run('quizSession.answer'),'unfinished');assert.equal(app.get('#notebook-pane').hidden,true);assert.equal(app.get('#progress-pane').hidden,true);
+});
+
+test('new dated cards keep their date during first-run date migration',()=>{
+ const app=boot();
+ assert.equal(app.run("words.find(w=>w.id==='bankenviertel-noun').addedOn"),'2026-10-23');
+ assert.ok(app.get('#cards').innerHTML.includes('<time datetime="2026-10-23">'));
+});
+test('new embedded card merges into saved words with its date and user edits intact',()=>{
+ const previous=seed.filter(w=>w.id!=='bankenviertel-noun').map(w=>({...w}));
+ previous[0].en='My personal meaning';
+ const app=boot({'wortgarten-offline-words':JSON.stringify(previous),'wortgarten-offline-embedded-ids':JSON.stringify(previous.map(w=>w.id)),'wortgarten-start-date-2026-10-17':'done'});
+ assert.equal(app.run("words.filter(w=>w.id==='bankenviertel-noun').length"),1);
+ assert.equal(app.run("words.find(w=>w.id==='bankenviertel-noun').addedOn"),'2026-10-23');
+ assert.equal(app.run('words[0].en'),'My personal meaning');
+ const reloaded=boot(app.store);
+ assert.equal(reloaded.run("words.filter(w=>w.id==='bankenviertel-noun').length"),1);
 });

@@ -6,9 +6,9 @@ Object.assign(copy.cn,{source:'我在哪里学到这个词',sourceDe:'来源句�
 const learnedSource={sourceDe:'Die Geschichte der deutschen Hauptstadt hat die Welt bewegt.',sourceEn:'The history of the German capital has moved the world.',sourceCn:'德国首都的历史触动了全世界。'};
 const seed=JSON.parse(document.getElementById('vocabulary-data').textContent);
 let words=seed,lang='en',filter='all',editing=null;try{words=JSON.parse(localStorage.getItem('wortgarten-offline-words'))||seed;lang=localStorage.getItem('wortgarten-offline-lang')||'en'}catch{}if(!copy[lang])lang='en';
-// User-selected starting date: apply once to current browser cards, including personal additions.
+// Fill missing dates once with the user-selected starting date; preserve dated cards.
 try{if(!localStorage.getItem('wortgarten-start-date-2026-10-17')){
-for(const w of words)w.addedOn='2026-10-17';
+for(const w of words)if(!validAddedOn(w.addedOn))w.addedOn='2026-10-17';
 localStorage.setItem('wortgarten-offline-words',JSON.stringify(words));
 localStorage.setItem('wortgarten-start-date-2026-10-17','done');
 }}catch{}
