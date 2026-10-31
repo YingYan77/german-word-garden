@@ -251,3 +251,58 @@ test('preview escapes saved word and meaning text',()=>{
  assert.match(html,/&lt;img src=x&gt;/);assert.match(html,/&lt;b&gt;meaning&lt;\/b&gt;/);
  assert.ok(!html.includes('<img src=x>'));
 });
+
+
+test('word-card button is available only after revealing the answer',()=>{
+ const app=boot();app.run('startQuiz()');
+ assert.ok(!app.get('#practice-body').innerHTML.includes('data-quiz-action="view-card"'));
+ app.run('openReviewCard()');assert.ok(!app.get('#review-card-dialog').open);
+ app.get('#quiz-answer').value='My answer';app.run('revealAnswer()');
+ assert.ok(app.get('#practice-body').innerHTML.includes('data-quiz-action="view-card"'));
+ app.get('#practice-body').onclick({target:{closest:()=>({dataset:{quizAction:'view-card'}})}});
+ assert.equal(app.get('#review-card-dialog').open,true);
+});
+test('review card displays complete content and all three verb forms',()=>{
+ const app=boot();app.get('#search').value='hineinspringen';app.get('#quiz-mode').value='verbs';app.run('startQuiz();revealAnswer(true);openReviewCard()');
+ const html=app.get('#review-content').innerHTML,w=seed.find(w=>w.id==='hineinspringen-verb');
+ for(const value of [w.word,w.en,w.cn,w.pron,w.verbPresent,w.verbPast,w.verbPerfect,w.sourceDe])assert.ok(html.includes(value));
+ assert.ok(html.includes(w.de.split('\n')[0]));assert.match(html,/Learning progress/);assert.match(html,/No attempts yet/);
+ assert.ok(!html.includes('data-action="edit"'));assert.ok(!html.includes('data-action="remove"'));
+});
+test('opening and closing the review card never changes the answer, session, score or history',()=>{
+ const app=boot();app.run('startQuiz()');app.get('#quiz-answer').value='My answer';app.run('revealAnswer()');
+ const before=app.run('JSON.stringify({quizSession,practiceAttempts})');
+ app.run('openReviewCard();closeReviewCard()');
+ assert.equal(app.run('JSON.stringify({quizSession,practiceAttempts})'),before);
+ assert.equal(app.get('#review-card-dialog').open,false);
+});
+test('review works after grading and closing restores focus to the same question',()=>{
+ const app=boot();app.run('startQuiz()');answer(app);
+ const before=app.run('JSON.stringify({quizSession,practiceAttempts})');let focused=false;
+ app.get('#quiz-view-card').focus=()=>{focused=true};app.run('openReviewCard()');
+ assert.match(app.get('#review-content').innerHTML,/100%/);
+ app.get('#review-close').onclick();assert.equal(focused,true);
+ assert.equal(app.run('JSON.stringify({quizSession,practiceAttempts})'),before);
+});
+test('Escape closes the pop-up without grading or advancing the quiz',()=>{
+ const app=boot();app.run('startQuiz();revealAnswer(true);openReviewCard()');let prevented=false;
+ app.get('#review-card-dialog').oncancel({preventDefault(){prevented=true}});
+ assert.equal(prevented,true);assert.equal(app.get('#review-card-dialog').open,false);
+ assert.equal(app.run('quizSession.index'),0);assert.equal(app.run('practiceAttempts.length'),0);
+});
+test('moving on or ending the session closes the card and prevents opening stale answers',()=>{
+ const app=boot();app.run('startQuiz()');answer(app);app.run('openReviewCard();nextQuestion()');
+ assert.equal(app.get('#review-card-dialog').open,false);app.run('openReviewCard()');assert.equal(app.get('#review-card-dialog').open,false);
+ app.run('revealAnswer(true);openReviewCard();endQuiz()');assert.equal(app.get('#review-card-dialog').open,false);
+ app.run('openReviewCard()');assert.equal(app.get('#review-card-dialog').open,false);
+});
+test('review card escapes saved content and supports words without optional fields',()=>{
+ const app=boot();const html=app.run("reviewWordCardHtml({word:'<img src=x>',type:'noun',en:'<b>meaning</b>',cn:'含义',de:'Zeile 1\\nZeile 2'})");
+ assert.match(html,/&lt;img src=x&gt;/);assert.match(html,/&lt;b&gt;meaning&lt;\/b&gt;/);assert.match(html,/Zeile 1<br>Zeile 2/);
+ assert.ok(!html.includes('<img src=x>'));assert.ok(!html.includes('undefined'));
+});
+test('review controls follow the selected interface language',()=>{
+ const app=boot();app.get('#locale').onchange({target:{value:'cn'}});app.run('startQuiz();revealAnswer(true);openReviewCard()');
+ assert.equal(app.get('#review-title').textContent,'词汇卡片');assert.equal(app.get('#review-close').textContent,'返回题目');
+ assert.match(app.get('#review-content').innerHTML,/学习进度/);
+});

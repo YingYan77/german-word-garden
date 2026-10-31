@@ -20,6 +20,8 @@ Open **Self-check** to practise the words selected by your notebook search, date
 
 Type an answer, select **Check answer**, then compare it with the reference and save it as **Correct** or **Needs review**. Matching ignores case, terminal punctuation, extra spaces, Swiss ss/ß differences, and optional English “to”. This is reference matching, not AI semantic grading: you decide whether an unlisted synonym is valid. **I don’t know** must be recorded as a miss. Each question can be recorded only once.
 
+After revealing an answer, **View word card** opens a read-only pop-up with the full meanings, grammar, verb forms, source sentence, examples, and learning progress. **Back to question** or Escape closes it and returns to the same question without recording an attempt or changing the score.
+
 The initial vocabulary includes short English/Chinese meanings and all seven verbs’ complete third-person singular **Präsens**, **Präteritum**, and **Perfekt** forms (including reflexive and separable parts). New words can supply these under **Edit → Self-check answers**. Separate alternatives with `|`. Missing verb forms are never guessed.
 
 **Learning progress** shows overall and per-word correct/total accuracy, plus separate scores for both translation directions and each verb tense. “Mastered” requires at least 3 attempts per translation direction and 2 per verb tense; every required skill must have at least 80% accuracy and its latest 2 answers correct. A skill with at least 2 attempts becomes **Needs review** below 60% or after 2 consecutive misses. These are practice indicators rather than a guarantee of long-term recall.

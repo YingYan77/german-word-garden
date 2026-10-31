@@ -18,6 +18,9 @@ Object.assign(copy.cn,{
  present:'现在时 Präsens',past:'过去时 Präteritum',perfect:'现在完成时 Perfekt',newWord:'未测试',learning:'学习中',difficult:'需复习',mastered:'已掌握',accuracy:'正确率',attempts:'次作答',noAttempts:'暂无作答记录',masteryHelp:'掌握标准：两个翻译方向各至少作答 3 次；动词的每种时态各至少 2 次；每项正确率均达 80%，且最近两次都正确。',progressScope:'进度包含全部词汇，自测使用笔记中的筛选结果。',statusFilter:'学习状态',allStatuses:'全部状态',noProgressWords:'此分类暂无词汇。',formsMissing:'请在编辑中补充缺失的动词形式。',progressStorage:'进度保存在当前浏览器中。请导出备份以保存词汇和自测记录。',practiceLoadFailed:'无法读取自测记录。继续作答前请先导出备份。',historyFull:'自测记录已满，请先导出备份。'
 });
 
+Object.assign(copy.en,{viewWordCard:'View word card',reviewWordCard:'Word card',backToQuestion:'Back to question',reviewExamples:'Examples',reviewGrammar:'Pronunciation / grammar',reviewForms:'Verb forms',reviewProgress:'Learning progress'});
+Object.assign(copy.de,{viewWordCard:'Wortkarte ansehen',reviewWordCard:'Wortkarte',backToQuestion:'Zurück zur Frage',reviewExamples:'Beispiele',reviewGrammar:'Aussprache / Grammatik',reviewForms:'Verbformen',reviewProgress:'Lernfortschritt'});
+Object.assign(copy.cn,{viewWordCard:'查看词汇卡片',reviewWordCard:'词汇卡片',backToQuestion:'返回题目',reviewExamples:'例句',reviewGrammar:'发音 / 语法',reviewForms:'动词形式',reviewProgress:'学习进度'});
 const practiceKey='wortgarten-practice-v1',practiceKinds=['deToMeaning','meaningToDe','present','past','perfect'];
 let practiceAttempts=[],practiceReadError=false,practiceRawBackup=null,quizSession=null,activePane='notebook';
 function validatePractice(data){
@@ -96,16 +99,37 @@ function gradeAnswer(correct){
 }
 function nextQuestion(){const s=quizSession;if(!s?.graded||s.ended)return;s.index++;s.revealed=false;s.graded=false;s.answer='';s.unknown=false;if(s.index>=s.questions.length)s.ended=true;renderQuiz()}
 function endQuiz(){if(quizSession){quizSession.ended=true;renderQuiz()}}
+function reviewWordCardHtml(w){
+ const text=(value,language)=>value?`<p lang="${language}">${esc(value).replace(/\n/g,'<br>')}</p>`:'';
+ const forms=[['present','verbPresent'],['past','verbPast'],['perfect','verbPerfect']].filter(([,field])=>w[field]);
+ return `<article class="review-word"><div class="badges"><span class="badge">${t(w.type)}</span>${w.learningLabel?`<span class="badge learning-label">${esc(w.learningLabel)}</span>`:''}</div><h3 lang="de">${esc(w.word)}</h3><p class="small">${t('addedOn')}: ${esc(addedOnText(w.addedOn))}</p>${w.pron?`<section><h4>${t('reviewGrammar')}</h4>${text(w.pron,'de')}</section>`:''}<div class="meaning"><span class="lang">EN</span><span lang="en">${esc(w.en)}</span></div><div class="meaning"><span class="lang">CN</span><span lang="zh-CN">${esc(w.cn)}</span></div>${w.type==='verb'&&forms.length?`<section><h4>${t('reviewForms')}</h4><dl>${forms.map(([kind,field])=>`<dt>${t(kind)}</dt><dd lang="de">${esc(w[field])}</dd>`).join('')}</dl></section>`:''}${w.sourceDe||w.sourceEn||w.sourceCn?`<section class="source"><h4>${t('source')}</h4>${text(w.sourceDe,'de')}${text(w.sourceEn,'en')}${text(w.sourceCn,'zh-CN')}${w.sourceDe===learnedSource.sourceDe?`<p class="context">${t('context')}</p>`:''}</section>`:''}<section class="example"><h4>${t('reviewExamples')}</h4>${text(w.de,'de')}${text(w.exen,'en')}${text(w.excn,'zh-CN')}</section><section><h4>${t('reviewProgress')}</h4>${wordProgressHtml(w)}<div class="skill-breakdown">${requiredSkills(w).map(kind=>`<div><span>${t(kind)}</span><strong>${accuracyText(wordAttempts(w).filter(a=>a.kind===kind))}</strong></div>`).join('')}</div></section></article>`;
+}
+function openReviewCard(){
+ if(!quizSession||!quizSession.revealed||quizSession.ended||activePane!=='practice')return;
+ const question=currentQuestion();if(!question)return;
+ const w=words.find(item=>item.id===question.word.id)||question.word;
+ $('#review-title').textContent=t('reviewWordCard');$('#review-close').textContent=t('backToQuestion');
+ $('#review-content').innerHTML=reviewWordCardHtml(w);
+ if(!$('#review-card-dialog').open)$('#review-card-dialog').showModal();
+}
+function closeReviewCard(){
+ if(!$('#review-card-dialog').open)return;
+ $('#review-card-dialog').close();$('#quiz-view-card')?.focus();
+}
+$('#review-close').onclick=closeReviewCard;
+$('#review-card-dialog').oncancel=e=>{e.preventDefault();closeReviewCard()};
 function renderQuiz(){
+ closeReviewCard();
  const s=quizSession,body=$('#practice-body');
  if(!s){body.innerHTML='';return}
  if(s.ended){body.innerHTML=`<div class="quiz-card"><h2>${t('sessionDone')}</h2><p>${sessionText()}</p><button class="primary" data-quiz-action="restart">${t('startPractice')}</button> <button class="secondary" data-quiz-action="progress">${t('progressTitle')}</button></div>`;return}
  const q=currentQuestion(),isVerb=['present','past','perfect'].includes(q.kind);
  const instruction=t(isVerb?'typeVerb':q.kind==='deToMeaning'?'typeMeaning':'typeGerman');
- body.innerHTML=`<div class="quiz-card"><div class="quiz-meta"><span>${t('questionNumber').replace('{n}',s.index+1).replace('{total}',s.questions.length)}</span><span>${sessionText()}</span></div><p class="eyebrow">${isVerb?`${t(q.kind)} · er`:t(q.kind)}</p><h2 class="quiz-prompt" lang="${q.promptLang}">${esc(q.prompt)}</h2><p>${instruction}</p><form id="practice-answer-form"><label>${t('yourAnswer')}<input id="quiz-answer" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="2000" ${s.revealed?'disabled':''} value="${esc(s.answer)}"></label>${!s.revealed?`<div class="quiz-buttons"><button class="primary" type="submit">${t('checkAnswer')}</button><button class="secondary" type="button" data-quiz-action="unknown">${t('dontKnow')}</button></div>`:''}</form>${s.revealed?`<div class="quiz-feedback" role="status"><strong>${t('reference')}</strong><p class="reference-text">${esc(q.reference)}</p><p>${!s.unknown&&answerMatches(s.answer,q)?t('matched'):t('compare')}</p>${!s.graded?`<p class="small">${t('confirmGrade')}</p><div class="quiz-buttons">${!s.unknown?`<button class="primary" data-quiz-action="correct">${t('markCorrect')}</button>`:''}<button class="secondary" data-quiz-action="wrong">${t('markWrong')}</button></div>`:`<p>${t(s.lastCorrect?'recordedCorrect':'recordedWrong')}</p><button class="primary" data-quiz-action="next">${t(s.index===s.questions.length-1?'finishPractice':'nextQuestion')}</button>`}</div>`:''}<button class="text-button" data-quiz-action="end">${t('endSession')}</button></div>`;
+ body.innerHTML=`<div class="quiz-card"><div class="quiz-meta"><span>${t('questionNumber').replace('{n}',s.index+1).replace('{total}',s.questions.length)}</span><span>${sessionText()}</span></div><p class="eyebrow">${isVerb?`${t(q.kind)} · er`:t(q.kind)}</p><h2 class="quiz-prompt" lang="${q.promptLang}">${esc(q.prompt)}</h2><p>${instruction}</p><form id="practice-answer-form"><label>${t('yourAnswer')}<input id="quiz-answer" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="2000" ${s.revealed?'disabled':''} value="${esc(s.answer)}"></label>${!s.revealed?`<div class="quiz-buttons"><button class="primary" type="submit">${t('checkAnswer')}</button><button class="secondary" type="button" data-quiz-action="unknown">${t('dontKnow')}</button></div>`:''}</form>${s.revealed?`<div class="quiz-feedback" role="status"><strong>${t('reference')}</strong><p class="reference-text">${esc(q.reference)}</p><button id="quiz-view-card" class="secondary" type="button" data-quiz-action="view-card" aria-haspopup="dialog" aria-controls="review-card-dialog">${t('viewWordCard')}</button><p>${!s.unknown&&answerMatches(s.answer,q)?t('matched'):t('compare')}</p>${!s.graded?`<p class="small">${t('confirmGrade')}</p><div class="quiz-buttons">${!s.unknown?`<button class="primary" data-quiz-action="correct">${t('markCorrect')}</button>`:''}<button class="secondary" data-quiz-action="wrong">${t('markWrong')}</button></div>`:`<p>${t(s.lastCorrect?'recordedCorrect':'recordedWrong')}</p><button class="primary" data-quiz-action="next">${t(s.index===s.questions.length-1?'finishPractice':'nextQuestion')}</button>`}</div>`:''}<button class="text-button" data-quiz-action="end">${t('endSession')}</button></div>`;
  if(!s.revealed&&activePane==='practice')$('#quiz-answer').focus();
 }
 function setPane(pane){
+ closeReviewCard();
  if(activePane==='practice'&&pane!=='practice'&&quizSession&&!quizSession.revealed&&!quizSession.ended)quizSession.answer=$('#quiz-answer').value;
  activePane=pane;
  for(const key of ['notebook','practice','progress']){$('#'+key+'-pane').hidden=key!==pane;$('#mode-'+key).setAttribute('aria-pressed',String(key===pane))}
@@ -128,7 +152,7 @@ for(const pane of ['notebook','practice','progress'])$('#mode-'+pane).onclick=()
 $('#start-practice').onclick=()=>startQuiz();$('#review-weak').onclick=()=>startQuiz(true);
 $('#progress-filter').onchange=renderProgress;
 $('#practice-body').onsubmit=e=>{e.preventDefault();revealAnswer()};
-$('#practice-body').onclick=e=>{const b=e.target.closest('[data-quiz-action]');if(!b)return;const actions={unknown:()=>revealAnswer(true),correct:()=>gradeAnswer(true),wrong:()=>gradeAnswer(false),next:nextQuestion,end:endQuiz,restart:()=>startQuiz(),progress:()=>setPane('progress')};actions[b.dataset.quizAction]?.()};
+$('#practice-body').onclick=e=>{const b=e.target.closest('[data-quiz-action]');if(!b)return;const actions={'view-card':openReviewCard,unknown:()=>revealAnswer(true),correct:()=>gradeAnswer(true),wrong:()=>gradeAnswer(false),next:nextQuestion,end:endQuiz,restart:()=>startQuiz(),progress:()=>setPane('progress')};actions[b.dataset.quizAction]?.()};
 // Keep the visible quiz translated when changing the interface language.
 const originalLocaleChange=$('#locale').onchange;
 $('#locale').onchange=e=>{if(quizSession&&!quizSession.revealed&&!quizSession.ended)quizSession.answer=$('#quiz-answer').value;originalLocaleChange(e);if(activePane==='practice')renderQuiz()};
