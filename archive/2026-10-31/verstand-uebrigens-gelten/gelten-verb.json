@@ -1,0 +1,22 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Ihr Verstand arbeitet unglaublich schnell, was übrigens keine Frage der Schulbildung ist, denn es gilt auch für die Unterschicht.",
+  "sourceEn": "Their minds work incredibly quickly, which, incidentally, is not a matter of schooling, since this also applies to people in the lower social class.",
+  "sourceCn": "他们的头脑运转得极快，顺便说一下，这与学校教育程度无关，因为这一点同样适用于社会下层的人。",
+  "id": "gelten-verb",
+  "word": "gelten",
+  "type": "verb",
+  "pron": "gelten → gilt → galt → hat gegolten · starkes Verb · für + Akkusativ gelten; als etwas gelten",
+  "en": "To apply; to be valid; to be considered or regarded as. In your sentence, gilt is the present tense, third-person singular, agreeing with es. Es gilt auch für die Unterschicht means “this also applies to the lower social class”. Es refers back to the preceding statement. Gelten für takes the accusative: für die Unterschicht. Other patterns: Die Fahrkarte gilt bis morgen (the ticket is valid until tomorrow); als zuverlässig gelten (to be considered reliable). The past forms are galt and hat gegolten.",
+  "cn": "适用；有效；被认为是。原句 gilt 是第三人称单数现在时，与 es 一致。es gilt auch für die Unterschicht 表示“这一点也适用于社会下层的人”。es 回指前面的说法。gelten für 后接第四格：für die Unterschicht。其他用法：Die Fahrkarte gilt bis morgen.（车票有效至明天。）；als zuverlässig gelten（被认为可靠）。过去时为 galt，完成时为 hat gegolten。",
+  "de": "Diese Regel gilt für alle.\nDie Fahrkarte gilt bis morgen.\nSie hat immer als zuverlässig gegolten.",
+  "exen": "This rule applies to everyone.\nThe ticket is valid until tomorrow.\nShe has always been considered reliable.",
+  "excn": "这条规则适用于所有人。\n这张车票有效至明天。\n她一直被认为很可靠。",
+  "quizDe": "gelten",
+  "quizEn": "to apply|to be valid|to be considered|to be regarded as",
+  "quizCn": "适用|有效|被认为是",
+  "verbPresent": "er gilt",
+  "verbPast": "er galt",
+  "verbPerfect": "er hat gegolten"
+}

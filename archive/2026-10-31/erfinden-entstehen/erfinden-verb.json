@@ -1,0 +1,22 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Auf einmal hatten die Menschen viel Zeit für andere Dinge: Schriften wurden erfunden, es entstanden Religionen, Königreiche.",
+  "sourceEn": "Suddenly, people had plenty of time for other things: writing systems were invented, and religions and kingdoms arose.",
+  "sourceCn": "突然之间，人们有了很多时间做其他事情：文字系统被发明出来，宗教和王国随之出现。",
+  "id": "erfinden-verb",
+  "word": "erfinden",
+  "type": "verb",
+  "pron": "erfinden → erfindet → erfand → hat erfunden · stark, nicht trennbar · etwas (Akkusativ) erfinden",
+  "en": "To invent; to devise; also to make up a story or excuse. Erfunden is the past participle of erfinden. In your sentence, Schriften wurden erfunden means “writing systems were invented”: wurden + participle is the simple-past passive, with Schriften as the plural subject. Compare active Menschen erfanden Schriften with passive Schriften wurden erfunden. The active perfect uses haben: hat erfunden. The prefix er- is inseparable, so there is no ge- in the participle. Distinguish erfinden (to create something new) from entdecken (to discover something already there).",
+  "cn": "发明；创制；也可表示编造故事或借口。erfunden 是 erfinden 的第二分词。原句 Schriften wurden erfunden 表示“文字系统被发明出来”：wurden + 第二分词 是过去时被动语态，Schriften 是复数主语。对比主动语态 Menschen erfanden Schriften 与被动语态 Schriften wurden erfunden。主动语态现在完成时用 haben：hat erfunden。前缀 er- 不可分，所以第二分词不加 ge-。注意 erfinden（创造新的东西）与 entdecken（发现已有的东西）的区别。",
+  "de": "Sie hat ein neues Spiel erfunden.\nWer erfand dieses Gerät?\nEr erfindet eine Ausrede, um nicht mitzukommen.",
+  "exen": "She has invented a new game.\nWho invented this device?\nHe makes up an excuse to avoid coming along.",
+  "excn": "她发明了一个新游戏。\n谁发明了这个装置？\n他编了一个借口，不想一起去。",
+  "quizDe": "erfinden",
+  "quizEn": "to invent|to devise|to make up",
+  "quizCn": "发明|创制|编造",
+  "verbPresent": "er erfindet",
+  "verbPast": "er erfand",
+  "verbPerfect": "er hat erfunden"
+}

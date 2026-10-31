@@ -1,0 +1,19 @@
+{
+  "id": "nicht-einmal-ein-prozent-phrase",
+  "word": "nicht einmal ein Prozent",
+  "type": "other",
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "pron": "nicht einmal = not even · ein Prozent = 1 % · ein Prozent der Menschen (Genitiv Plural) · Kurzform: nicht mal (umgangssprachlich)",
+  "en": "Not even one percent. The key expression in the source is nicht einmal (“not even”), which emphasises how small a quantity is. Einmal does not mean “once” in this expression. Ein Prozent means one percent (1/100), and der Menschen is genitive plural: “of the people”. Thus nicht einmal ein Prozent der Menschen means “not even one percent of people”. Without nicht, einmal ein Prozent does not express the same idea. The pattern also works with other quantities or actions: nicht einmal zehn Minuten; nicht einmal eine Nachricht schreiben. In the source, lebte agrees with the singular quantity ein Prozent. Zur Zeit Christi means “at the time of Christ”; 1920 waren es schon 14 Prozent means “by 1920, it was already 14 percent”.",
+  "cn": "连百分之一都不到。原句的核心表达是 nicht einmal（甚至不；连……都不），强调数量之少。这里 einmal 不表示“一次”。ein Prozent 表示百分之一（1/100），der Menschen 是复数第二格，表示“人们的”。因此 nicht einmal ein Prozent der Menschen 意为“连百分之一的人都不到”。去掉 nicht 后，einmal ein Prozent 就不再表达这个意思。此结构也可用于其他数量或动作，如 nicht einmal zehn Minuten（连十分钟都不到），nicht einmal eine Nachricht schreiben（连一条消息都不写）。来源句中 lebte 与单数数量 ein Prozent 一致。Zur Zeit Christi 表示“在基督时代”；1920 waren es schon 14 Prozent 表示“到了1920年，这一比例已达14%”。",
+  "de": "Nicht einmal ein Prozent der Fläche ist bebaut.\nDie Fahrt dauert nicht einmal zehn Minuten.\nEr hat nicht einmal eine Nachricht geschrieben.",
+  "exen": "Not even one percent of the area is built on.\nThe journey takes less than ten minutes.\nHe did not even write a message.",
+  "excn": "这片区域连百分之一的面积都没有建上建筑。\n这段路程连十分钟都不到。\n他连一条消息都没有写。",
+  "sourceDe": "Zur Zeit Christi lebte nicht einmal ein Prozent der Menschen in Städten, 1920 waren es schon 14 Prozent.",
+  "sourceEn": "At the time of Christ, not even one percent of people lived in cities; by 1920, the proportion was already 14 percent.",
+  "sourceCn": "在基督时代，住在城市里的人连百分之一都不到；到了1920年，这一比例已达14%。",
+  "quizDe": "nicht einmal ein Prozent",
+  "quizEn": "not even one percent|not even one per cent",
+  "quizCn": "连百分之一都不到|甚至不到百分之一"
+}

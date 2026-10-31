@@ -1,0 +1,22 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Der Mensch lebt seit fünf bis acht Millionen Jahren auf der Erde, die ersten Städte wurden erst vor rund 8000 Jahren gegründet.",
+  "sourceEn": "Humans have lived on Earth for five to eight million years; the first cities were founded only around 8,000 years ago.",
+  "sourceCn": "人类在地球上已生活了五百万至八百万年，而最早的城市直到大约八千年前才建立。",
+  "id": "gruenden-verb",
+  "word": "gründen",
+  "type": "verb",
+  "pron": "gründen → gründet → gründete → hat gegründet · regelmässig · etwas (Akkusativ) gründen · Passiv: wurde gegründet",
+  "en": "To found; to establish; to set up a company, organisation or settlement. Gegründet is the past participle of gründen. In your sentence, die ersten Städte is the plural subject and wurden … gegründet is the simple-past passive: “were founded”. Wurden is the plural past form of werden; the participle goes at the end. Compare active Sie gründeten eine Stadt with passive Eine Stadt wurde gegründet. The active perfect is hat gegründet. Erst vor rund 8000 Jahren means “only around 8,000 years ago”.",
+  "cn": "创立；建立；成立，常用于公司、组织或聚落。gegründet 是 gründen 的第二分词。原句 die ersten Städte 是复数主语，wurden … gegründet 是过去时被动语态，表示“被建立了”。wurden 是 werden 的过去时复数形式；第二分词位于句末。对比主动语态 Sie gründeten eine Stadt（他们建立了一座城市）与被动语态 Eine Stadt wurde gegründet（一座城市被建立了）。主动语态现在完成时用 hat gegründet。erst vor rund 8000 Jahren 表示“直到大约八千年前才……”。",
+  "de": "Sie möchten eine Firma gründen.\nWir haben letztes Jahr einen Verein gegründet.\nDie Universität wurde vor hundert Jahren gegründet.",
+  "exen": "They would like to start a company.\nWe founded an association last year.\nThe university was founded a hundred years ago.",
+  "excn": "他们想创办一家公司。\n我们去年成立了一个协会。\n这所大学成立于一百年前。",
+  "quizDe": "gründen",
+  "quizEn": "to found|to establish|to set up",
+  "quizCn": "创立|建立|成立",
+  "verbPresent": "er gründet",
+  "verbPast": "er gründete",
+  "verbPerfect": "er hat gegründet"
+}

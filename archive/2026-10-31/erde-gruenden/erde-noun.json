@@ -1,0 +1,19 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Der Mensch lebt seit fünf bis acht Millionen Jahren auf der Erde, die ersten Städte wurden erst vor rund 8000 Jahren gegründet.",
+  "sourceEn": "Humans have lived on Earth for five to eight million years; the first cities were founded only around 8,000 years ago.",
+  "sourceCn": "人类在地球上已生活了五百万至八百万年，而最早的城市直到大约八千年前才建立。",
+  "id": "erde-noun",
+  "word": "die Erde",
+  "type": "noun",
+  "pron": "die Erde · auf der Erde (Dativ) · meist ohne Plural als Planet oder Boden · Plural: die Erden (besondere Stoffarten)",
+  "en": "Earth (our planet); earth, soil or ground. In your sentence, auf der Erde means “on Earth”. It describes a location, so auf takes the dative: die Erde → der Erde; the noun remains feminine. Compare location auf der Erde with direction auf die Erde. As the name of the planet or as soil, Erde is normally singular. The plural Erden occurs for particular kinds of earth or mineral substances. The supplied source’s historical numbers are retained as quoted text.",
+  "cn": "地球；泥土；土地。原句 auf der Erde 表示“在地球上”，说明位置，因此 auf 后接第三格：die Erde → der Erde；名词仍是阴性。对比表示位置的 auf der Erde 与表示方向的 auf die Erde。表示地球或泥土时通常用单数；Erden 这一复数形式用于特定种类的土或矿物质。来源中的历史数字按原文保留。",
+  "de": "Wir leben auf der Erde.\nDie Erde dreht sich um die Sonne.\nFür diese Pflanze brauche ich frische Erde.",
+  "exen": "We live on Earth.\nThe Earth revolves around the Sun.\nI need fresh soil for this plant.",
+  "excn": "我们生活在地球上。\n地球绕着太阳转。\n这株植物需要新土。",
+  "quizDe": "die Erde",
+  "quizEn": "Earth|earth|soil|ground",
+  "quizCn": "地球|泥土|土地"
+}

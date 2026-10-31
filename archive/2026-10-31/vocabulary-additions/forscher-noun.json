@@ -1,0 +1,19 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Der Forscher Philip Tobias über wachsende Grossstädte und die Folgen.",
+  "sourceEn": "Researcher Philip Tobias on growing cities and their consequences.",
+  "sourceCn": "研究者菲利普·托比亚斯谈不断扩大的大城市及其后果。",
+  "id": "forscher-noun",
+  "word": "der Forscher",
+  "type": "noun",
+  "pron": "Plural: die Forscher · Genitiv: des Forschers · feminin: die Forscherin, Plural: die Forscherinnen · forschen = to research",
+  "en": "Researcher; scientist. Someone who systematically investigates a subject. In the source, der Forscher Philip Tobias identifies the researcher by name. Forscher is masculine; the feminine form is Forscherin. The masculine plural has the same form as the singular: die Forscher. Related verb: forschen (to research). The source is a heading-like fragment without a finite verb.",
+  "cn": "研究者；科研人员。指系统研究某个领域的人。来源句 der Forscher Philip Tobias 用姓名说明这位研究者是谁。Forscher 为阳性，对应阴性为 Forscherin；阳性复数不变：die Forscher。相关动词：forschen（研究）。来源文字类似标题，是一个没有变位动词的片段。",
+  "de": "Der Forscher untersucht das Wachstum der Städte.\nViele Forscher arbeiten an einer Universität.\nDie Forscherin stellt ihre Ergebnisse vor.",
+  "exen": "The researcher investigates the growth of cities.\nMany researchers work at a university.\nThe female researcher presents her findings.",
+  "excn": "这位研究者研究城市的发展。\n许多研究者在大学工作。\n这位女研究者介绍她的研究成果。",
+  "quizDe": "der Forscher",
+  "quizEn": "researcher|scientist",
+  "quizCn": "研究者|科研人员|科学家"
+}

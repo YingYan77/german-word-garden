@@ -1,0 +1,19 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Das Problem ist, dass die Bevölkerung der Städte immer mehr zunimmt.",
+  "sourceEn": "The problem is that the population of the cities keeps growing.",
+  "sourceCn": "问题在于，城市人口不断增加。",
+  "id": "bevoelkerung-noun",
+  "word": "die Bevölkerung",
+  "type": "noun",
+  "pron": "meist Singular · Plural: die Bevölkerungen (verschiedener Gebiete) · Genitiv/Dativ: der Bevölkerung",
+  "en": "Population; inhabitants of a place considered collectively. Usually singular when referring to the people of a particular country, city or area. In your sentence, die Bevölkerung is the nominative singular subject of zunimmt. Der Städte is genitive plural: “of the cities”, describing whose population is meant. Although many people are involved, the collective noun Bevölkerung is grammatically singular, so the verb is zunimmt, not zunehmen. The plural Bevölkerungen is possible when comparing populations of different areas.",
+  "cn": "人口；某地区居民的总称。指某个国家、城市或地区的人口时通常用单数。原句 die Bevölkerung 是第一格单数，作 zunimmt 的主语。der Städte 是复数第二格，表示“各城市的”，修饰 Bevölkerung。虽然指许多人，但 Bevölkerung 是集合名词，在语法上为单数，因此动词用 zunimmt，而不是 zunehmen。比较不同地区的人口群体时，也可用复数 Bevölkerungen。",
+  "de": "Die Bevölkerung der Stadt wächst.\nEin grosser Teil der Bevölkerung lebt auf dem Land.\nDie Stadt informiert die Bevölkerung über die neuen Regeln.",
+  "exen": "The city’s population is growing.\nA large part of the population lives in the countryside.\nThe city informs the population about the new rules.",
+  "excn": "这座城市的人口正在增长。\n很大一部分人口生活在农村。\n市政府向居民介绍新规定。",
+  "quizDe": "die Bevölkerung",
+  "quizEn": "population|inhabitants",
+  "quizCn": "人口|居民"
+}

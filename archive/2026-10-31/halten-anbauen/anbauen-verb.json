@@ -1,0 +1,22 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Dann lernten sie, Tiere zu halten und Früchte anzubauen.",
+  "sourceEn": "Then they learned to keep animals and grow crops.",
+  "sourceCn": "后来，他们学会了饲养动物和种植作物。",
+  "id": "anbauen-verb",
+  "word": "anbauen",
+  "type": "verb",
+  "pron": "anbauen → baut an → baute an → hat angebaut · trennbar · zu-Infinitiv: anzubauen · Pflanzen anbauen",
+  "en": "To grow or cultivate crops; also to build an extension onto a building. In your sentence, Früchte anbauen means to grow crops or produce; Früchte can mean agricultural produce here, not only fruit in the everyday sense. Anzubauen is the zu-infinitive of the separable verb anbauen: an + zu + bauen. Compare Tiere zu halten with Früchte anzubauen. In a main clause, the prefix separates: Sie bauen Gemüse an. The past participle is angebaut.",
+  "cn": "种植；栽培；也可指给建筑物增建部分。原句 Früchte anbauen 表示“种植作物”；Früchte 在这里可泛指农产品，不仅指日常所说的水果。anzubauen 是可分动词 anbauen 的带 zu 不定式：an + zu + bauen。对比 Tiere zu halten 与 Früchte anzubauen。主句中前缀分开：Sie bauen Gemüse an.（他们种蔬菜。）第二分词为 angebaut。",
+  "de": "Wir bauen im Garten Gemüse an.\nSie hat dieses Jahr Kartoffeln angebaut.\nDie Familie plant, einen Wintergarten anzubauen.",
+  "exen": "We grow vegetables in the garden.\nShe grew potatoes this year.\nThe family plans to add a conservatory to the house.",
+  "excn": "我们在花园里种蔬菜。\n她今年种了土豆。\n这家人计划给房子增建一间玻璃暖房。",
+  "quizDe": "anbauen",
+  "quizEn": "to grow|to cultivate|to build an extension",
+  "quizCn": "种植|栽培|增建",
+  "verbPresent": "er baut an",
+  "verbPast": "er baute an",
+  "verbPerfect": "er hat angebaut"
+}

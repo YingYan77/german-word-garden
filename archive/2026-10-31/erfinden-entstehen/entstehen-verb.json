@@ -1,0 +1,22 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Auf einmal hatten die Menschen viel Zeit für andere Dinge: Schriften wurden erfunden, es entstanden Religionen, Königreiche.",
+  "sourceEn": "Suddenly, people had plenty of time for other things: writing systems were invented, and religions and kingdoms arose.",
+  "sourceCn": "突然之间，人们有了很多时间做其他事情：文字系统被发明出来，宗教和王国随之出现。",
+  "id": "entstehen-verb",
+  "word": "entstehen",
+  "type": "verb",
+  "pron": "entstehen → entsteht → entstand → ist entstanden · stark, nicht trennbar · ohne Akkusativobjekt · aus + Dativ entstehen",
+  "en": "To arise; to come into being; to develop or be formed. In your sentence, entstanden is NOT a past participle: it is the plural simple-past form of entstehen, agreeing with Religionen, Königreiche. Es is a placeholder in the first position; the things that arose are the grammatical subject. Compare Es entstanden neue Städte with Neue Städte entstanden. The same spelling entstanden is also the past participle in sind entstanden (“have arisen”). The perfect uses sein: ist entstanden. Entstehen does not take a direct accusative object. Compare Eine Stadt entsteht (a city comes into being) with Menschen gründen eine Stadt (people found a city).",
+  "cn": "产生；出现；形成。原句中的 entstanden 不是第二分词，而是 entstehen 的复数过去时，与 Religionen, Königreiche 一致。es 占据句首位置，真正的语法主语是出现的宗教、王国。对比 Es entstanden neue Städte 与 Neue Städte entstanden（新的城市出现了）。entstanden 同时也是第二分词，可用于 sind entstanden（已经形成）。完成时用 sein：ist entstanden。entstehen 不带直接第四格宾语。对比 Eine Stadt entsteht（一座城市形成）与 Menschen gründen eine Stadt（人们建立一座城市）。",
+  "de": "Durch das Gespräch ist eine neue Idee entstanden.\nNach dem Regen entstanden grosse Pfützen.\nBeim Umbau entstehen zusätzliche Kosten.",
+  "exen": "A new idea emerged from the conversation.\nLarge puddles formed after the rain.\nAdditional costs arise during the renovation.",
+  "excn": "交谈中产生了一个新想法。\n雨后形成了大水洼。\n改建过程中会产生额外费用。",
+  "quizDe": "entstehen",
+  "quizEn": "to arise|to come into being|to develop|to be formed",
+  "quizCn": "产生|出现|形成",
+  "verbPresent": "er entsteht",
+  "verbPast": "er entstand",
+  "verbPerfect": "er ist entstanden"
+}

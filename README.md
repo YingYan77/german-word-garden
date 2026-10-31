@@ -10,6 +10,10 @@ The online version is deployed with GitHub Pages after Pages is enabled for this
 
 New words automatically record their local **Added on** date. You can adjust it in the word editor. Editing and backup transfers preserve the date. All words present at the start of date tracking use **17 October 2026**, including existing browser-saved words (applied once). Later additions retain their own dates. Open **Filters** below the search box to combine an inclusive date range with a learning-source label, category, and text search. Source options update automatically as you add labels.
 
+## Duplicate words
+
+The Add/Edit form checks while you type for the same German word and category, ignoring capitalisation and extra spaces. It previews existing entries and lets you edit one. Saving a second card requires selecting **Add another card anyway** first. Different word categories remain separate. The check uses all words in the current browser, including entries hidden by notebook filters. It does not detect different conjugations, synonyms, or words stored only in a different browser.
+
 ## Self-check and learning progress
 
 Open **Self-check** to practise the words selected by your notebook search, date, source, and category filters. Choose German → English/Chinese, English/Chinese → German, verb tenses, or a mixture, with 10, 20, or all available questions. Difficult words are prioritized; **Review difficult words** restricts practice to words that need review.

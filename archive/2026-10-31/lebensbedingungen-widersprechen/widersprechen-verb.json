@@ -1,0 +1,22 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Professor Tobias, was macht Sie sicher, dass die Lebensbedingungen in grossen Städten der menschlichen Natur widersprechen?",
+  "sourceEn": "Professor Tobias, what makes you certain that living conditions in large cities conflict with human nature?",
+  "sourceCn": "托比亚斯教授，是什么让您确信，大城市的生活条件违背了人类的天性？",
+  "id": "widersprechen-verb",
+  "word": "widersprechen",
+  "type": "verb",
+  "pron": "widersprechen → widerspricht → widersprach → hat widersprochen · stark, nicht trennbar · jemandem / etwas (Dativ) widersprechen",
+  "en": "To contradict or disagree with someone; to conflict with or run counter to something. Widersprechen takes the DATIVE, not the accusative. In your sentence, die Lebensbedingungen is the plural subject and der menschlichen Natur is the dative object: die menschliche Natur → der menschlichen Natur. Here the meaning is “to conflict with human nature”, rather than to verbally disagree. Widersprechen is the present-tense plural form at the end of the dass-clause. The prefix wider- is inseparable, and the participle is widersprochen, without ge-. Do not confuse wider- with wieder (again).",
+  "cn": "反驳；不同意某人的看法；与某事相矛盾；违背。widersprechen 后接第三格，不是第四格。原句 die Lebensbedingungen 是复数主语，der menschlichen Natur 是第三格宾语：die menschliche Natur → der menschlichen Natur。这里表示“违背人类天性”，而不是口头上反对。widersprechen 在此是现在时复数变位，位于 dass 从句末尾。前缀 wider- 不可分，第二分词为 widersprochen，不加 ge-。不要把 wider- 与 wieder（再次）混淆。",
+  "de": "Ich widerspreche dir in diesem Punkt.\nSie hat der Behauptung widersprochen.\nDiese Entscheidung widerspricht unseren Grundsätzen.",
+  "exen": "I disagree with you on this point.\nShe contradicted the claim.\nThis decision conflicts with our principles.",
+  "excn": "在这一点上，我不同意你的看法。\n她反驳了这一说法。\n这个决定违背了我们的原则。",
+  "quizDe": "widersprechen",
+  "quizEn": "to contradict|to disagree|to disagree with|to conflict with|to run counter to",
+  "quizCn": "反驳|不同意|与……相矛盾|违背",
+  "verbPresent": "er widerspricht",
+  "verbPast": "er widersprach",
+  "verbPerfect": "er hat widersprochen"
+}

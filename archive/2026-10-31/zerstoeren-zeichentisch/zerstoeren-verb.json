@@ -1,0 +1,22 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Wir können die Städte ja nicht zerstören, an unsere Zeichentische gehen und noch einmal anfangen wie in der Steinzeit oder im Garten Eden.",
+  "sourceEn": "We cannot simply destroy the cities, go to our drafting tables and start all over again as in the Stone Age or the Garden of Eden.",
+  "sourceCn": "我们总不能把城市摧毁，回到绘图桌前，像石器时代或伊甸园里那样重新开始。",
+  "id": "zerstoeren-verb",
+  "word": "zerstören",
+  "type": "verb",
+  "pron": "zerstören → zerstört → zerstörte → hat zerstört · regelmässig, nicht trennbar · etwas (Akkusativ) zerstören",
+  "en": "To destroy; to ruin. Means to damage something so severely that it no longer exists or functions as before. Can also describe ruining trust, hopes or plans. In your sentence, die Städte is the accusative plural object. After können, zerstören is an infinitive without zu. The prefix zer- is inseparable, so the participle is zerstört, without ge-. Ja adds a sense that the point is obvious or shared; here, ja nicht can be conveyed as “cannot simply”.",
+  "cn": "摧毁；毁坏；使破灭。表示严重破坏某物，使其不复存在或无法像原来那样使用；也可指摧毁信任、希望或计划。原句 die Städte 是复数第四格宾语；情态动词 können 后用不带 zu 的动词原形 zerstören。前缀 zer- 不可分，因此第二分词为 zerstört，不加 ge-。ja 在此表示说话人认为这一点显然或双方已有共识，可译为“总不能……”。",
+  "de": "Der Sturm hat viele Häuser zerstört.\nEine Lüge kann Vertrauen zerstören.\nDas Feuer zerstörte einen Teil des Gebäudes.",
+  "exen": "The storm destroyed many houses.\nA lie can destroy trust.\nThe fire destroyed part of the building.",
+  "excn": "暴风雨摧毁了许多房屋。\n一句谎言就可能摧毁信任。\n大火烧毁了这栋建筑的一部分。",
+  "quizDe": "zerstören",
+  "quizEn": "to destroy|to ruin",
+  "quizCn": "摧毁|毁坏|使破灭",
+  "verbPresent": "er zerstört",
+  "verbPast": "er zerstörte",
+  "verbPerfect": "er hat zerstört"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "sich-veraendern-verb",
+  "word": "sich verändern",
+  "type": "verb",
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "pron": "sich verändern → verändert sich → veränderte sich → hat sich verändert · nicht trennbar · auch: etwas (Akkusativ) verändern",
+  "en": "To change; to become different. Reflexive sich verändern describes a person, thing or situation changing; transitive etwas verändern means to change something. In your sentence, verändert is the past participle in hat sich … verändert, the perfect tense. The prefix ver- is inseparable, so the participle has no ge-. Mehr is the subject (“more [things]”), while sich belongs to the verb. The comparison mehr … als means “more … than”. In den vergangenen 100 Jahren means “in the past 100 years”; zuvor means “before that”. The sentence says that more has changed in that recent period than in the preceding 7,900 years.",
+  "cn": "改变；发生变化。反身形式 sich verändern 表示人、事物或情况自身发生变化；etwas verändern 则表示改变某事物，后接第四格宾语。原句 verändert 是现在完成时 hat sich … verändert 中的第二分词。前缀 ver- 不可分，因此第二分词不加 ge-。mehr 是主语，表示“更多的事物”，sich 是动词结构的一部分。mehr … als 表示“比……更多”。in den vergangenen 100 Jahren 表示“在过去一百年里”；zuvor 表示“此前”。全句说，最近这段时间发生的变化，比此前七千九百年还多。",
+  "de": "Die Stadt hat sich stark verändert.\nUnsere Pläne verändern sich ständig.\nDie neue Arbeit hat ihren Alltag verändert.",
+  "exen": "The city has changed a lot.\nOur plans keep changing.\nThe new job has changed her daily life.",
+  "excn": "这座城市发生了很大的变化。\n我们的计划不断变化。\n新工作改变了她的日常生活。",
+  "sourceDe": "Vor allem in den vergangenen 100 Jahren hat sich mehr verändert als in den 7900 Jahren zuvor.",
+  "sourceEn": "Especially in the past 100 years, more has changed than in the preceding 7,900 years.",
+  "sourceCn": "尤其是在过去一百年里，发生的变化比此前七千九百年还多。",
+  "quizDe": "sich verändern",
+  "quizEn": "to change|to become different",
+  "quizCn": "改变|发生变化",
+  "verbPresent": "er verändert sich",
+  "verbPast": "er veränderte sich",
+  "verbPerfect": "er hat sich verändert"
+}

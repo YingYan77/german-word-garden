@@ -1,0 +1,22 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Das Problem ist, dass die Bevölkerung der Städte immer mehr zunimmt.",
+  "sourceEn": "The problem is that the population of the cities keeps growing.",
+  "sourceCn": "问题在于，城市人口不断增加。",
+  "id": "zunehmen-verb",
+  "word": "zunehmen",
+  "type": "verb",
+  "pron": "zunehmen → nimmt zu → nahm zu → hat zugenommen · stark, trennbar · Gegenteil: abnehmen",
+  "en": "To increase; to grow; also to gain weight. In your sentence, zunimmt is the present tense, third-person singular, agreeing with die Bevölkerung. Zunehmen is separable: in a main clause, Die Bevölkerung nimmt zu. In a dass-clause, the conjugated verb goes to the end and stays together: dass die Bevölkerung zunimmt. Immer mehr emphasises continuing growth. The participle is zugenommen; the perfect uses haben. Zunehmen does not take a direct object in these meanings. Compare zunehmen (to increase) with etwas erhöhen (to increase or raise something).",
+  "cn": "增加；增长；也可表示体重增加。原句 zunimmt 是第三人称单数现在时，与 die Bevölkerung 一致。zunehmen 是可分动词：主句说 Die Bevölkerung nimmt zu.；dass 从句中，变位动词放在句末并合写：dass die Bevölkerung zunimmt。immer mehr 强调持续增长。第二分词为 zugenommen，完成时用 haben。这些用法不带直接宾语。注意区分 zunehmen（某事物自身增加）与 etwas erhöhen（使某事物增加；提高）。",
+  "de": "Der Verkehr in der Stadt nimmt zu.\nDie Nachfrage nach Wohnungen hat stark zugenommen.\nEr hat im letzten Jahr zwei Kilo zugenommen.",
+  "exen": "Traffic in the city is increasing.\nDemand for housing has increased sharply.\nHe gained two kilos last year.",
+  "excn": "城市里的交通流量正在增加。\n住房需求大幅增加了。\n他去年体重增加了两公斤。",
+  "quizDe": "zunehmen",
+  "quizEn": "to increase|to grow|to gain weight",
+  "quizCn": "增加|增长|体重增加",
+  "verbPresent": "er nimmt zu",
+  "verbPast": "er nahm zu",
+  "verbPerfect": "er hat zugenommen"
+}

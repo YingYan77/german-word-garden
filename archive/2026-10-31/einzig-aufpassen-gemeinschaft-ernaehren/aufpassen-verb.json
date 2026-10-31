@@ -1,0 +1,22 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Nun konnte ein einziger Junge auf die Tiere aufpassen, während vorher zwanzig Männer auf die Jagd gehen mussten, um ihre Gemeinschaft zu ernähren.",
+  "sourceEn": "Now a single boy could look after the animals, whereas previously twenty men had had to go hunting to feed their community.",
+  "sourceCn": "现在只需一个男孩就能照看动物，而此前二十个男人必须外出狩猎，才能养活他们的群体。",
+  "id": "aufpassen-verb",
+  "word": "aufpassen",
+  "type": "verb",
+  "pron": "aufpassen → passt auf → passte auf → hat aufgepasst · trennbar · auf jemanden/etwas (Akkusativ) aufpassen",
+  "en": "To look after; to watch; to pay attention. Auf jemanden/etwas aufpassen means to look after someone or something, with auf + accusative. In your sentence, auf die Tiere aufpassen means “to look after the animals”. Konnte is the past tense of können; after a modal verb, aufpassen stays as one infinitive at the end, without zu. Compare Er passt auf die Tiere auf. Here the first auf is a preposition and the final auf is the separable verb prefix. Without an object, aufpassen can mean to pay attention: Pass auf!",
+  "cn": "照看；看管；留心；注意。auf jemanden/etwas aufpassen 表示照看某人或某物，auf 后接第四格。原句 auf die Tiere aufpassen 表示“照看动物”。konnte 是 können 的过去时；情态动词后用不带 zu 的动词原形，aufpassen 不分开并位于句末。对比 Er passt auf die Tiere auf.（他照看动物。）这里第一个 auf 是介词，句末的 auf 是可分动词前缀。不带宾语时也可表示留心：Pass auf!（注意！）",
+  "de": "Kannst du auf meine Tasche aufpassen?\nSie passt auf ihre kleine Schwester auf.\nIm Unterricht habe ich gut aufgepasst.",
+  "exen": "Can you watch my bag?\nShe looks after her little sister.\nI paid close attention in class.",
+  "excn": "你能帮我看一下包吗？\n她照看妹妹。\n我上课认真听讲了。",
+  "quizDe": "aufpassen",
+  "quizEn": "to look after|to watch|to pay attention",
+  "quizCn": "照看|看管|留心|注意",
+  "verbPresent": "er passt auf",
+  "verbPast": "er passte auf",
+  "verbPerfect": "er hat aufgepasst"
+}

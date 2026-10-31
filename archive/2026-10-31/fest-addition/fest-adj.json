@@ -1,0 +1,19 @@
+{
+  "id": "fest-adj",
+  "word": "fest",
+  "type": "adj",
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "pron": "fest → fester → am festesten · an festen Plätzen (Dativ Plural) · ein fester Platz · festhalten = to hold firmly",
+  "en": "Fixed; permanent; firm; solid; secure. In your sentence, an festen Plätzen means “in fixed locations”: people lived in settled places instead of moving from place to place. Festen is an inflected form of fest, not a separate word. An describes a location here and takes the dative. Plätze becomes Plätzen in the dative plural, and without an article the adjective ends in -en: an festen Plätzen. Compare ein fester Platz with an einem festen Platz. Other uses include a fixed appointment, firm ground, or holding something firmly. Do not confuse lowercase fest with das Fest (celebration).",
+  "cn": "固定的；长期稳定的；坚固的；牢固的。原句 an festen Plätzen 表示“在固定的地点”：人们开始定居，而不是不断迁移。festen 是 fest 的变格形式，不是另一个词。an 在这里表示位置，接第三格。Plätze 的复数第三格为 Plätzen；没有冠词时，形容词用 -en：an festen Plätzen。对比 ein fester Platz 与 an einem festen Platz。其他用法包括固定的约定、坚实的地面，以及牢牢抓住某物。注意区分小写形容词 fest 与名词 das Fest（庆典）。",
+  "de": "Wir haben noch keinen festen Termin.\nDer Boden unter unseren Füssen ist fest.\nHalte das Seil bitte fest.",
+  "exen": "We do not have a fixed appointment yet.\nThe ground beneath our feet is firm.\nPlease hold the rope firmly.",
+  "excn": "我们还没有确定的约定时间。\n我们脚下的地面很坚实。\n请抓紧绳子。",
+  "sourceDe": "Von diesem Zeitpunkt an wohnten sie an festen Plätzen.",
+  "sourceEn": "From that point on, they lived in fixed locations.",
+  "sourceCn": "从那时起，他们开始在固定地点居住。",
+  "quizDe": "fest",
+  "quizEn": "fixed|permanent|firm|solid|secure",
+  "quizCn": "固定的|稳定的|坚固的|牢固的"
+}

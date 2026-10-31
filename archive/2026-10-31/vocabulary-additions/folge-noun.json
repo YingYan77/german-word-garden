@@ -1,0 +1,19 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Der Forscher Philip Tobias über wachsende Grossstädte und die Folgen.",
+  "sourceEn": "Researcher Philip Tobias on growing cities and their consequences.",
+  "sourceCn": "研究者菲利普·托比亚斯谈不断扩大的大城市及其后果。",
+  "id": "folge-noun",
+  "word": "die Folge",
+  "type": "noun",
+  "pron": "Plural: die Folgen · die Folge von + Dativ · Folgen haben · zur Folge haben · in der Folge",
+  "en": "Consequence; result; also an episode of a series or a sequence. In the source, die Folgen means “the consequences”, referring to the effects of growing cities. It is accusative plural, coordinated with wachsende Grossstädte after über: on growing cities and their consequences. Common expressions: Folgen haben (to have consequences), zur Folge haben (to result in), die Folgen von etwas (the consequences of something). Not the verb folgen (to follow), which is written lowercase.",
+  "cn": "后果；结果；也可指连续剧的一集或某种序列。来源中的 die Folgen 是复数，表示大城市不断扩大带来的后果。它与 wachsende Grossstädte 并列，都受 über 支配，用第四格。常见搭配：Folgen haben（产生后果），zur Folge haben（导致），die Folgen von etwas（某事的后果）。注意与小写动词 folgen（跟随）区分。",
+  "de": "Der Klimawandel hat Folgen für viele Menschen.\nDer Unfall hatte eine lange Sperrung der Strasse zur Folge.\nHeute sehen wir die nächste Folge der Serie.",
+  "exen": "Climate change has consequences for many people.\nThe accident resulted in a long road closure.\nToday we are watching the next episode of the series.",
+  "excn": "气候变化对许多人产生影响。\n这起事故导致道路长时间封闭。\n今天我们看这部连续剧的下一集。",
+  "quizDe": "die Folge",
+  "quizEn": "consequence|result|episode|sequence",
+  "quizCn": "后果|结果|一集|序列"
+}

@@ -1,0 +1,19 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Das ist ja noch harmlos, aber ebenso gibt es mehr Selbstmorde, mehr Diebe usw.",
+  "sourceEn": "That is still relatively harmless, but there are also more suicides, more thieves, and so on.",
+  "sourceCn": "那还算无害，但也有更多自杀事件、更多小偷等等。",
+  "id": "selbstmord-noun",
+  "word": "der Selbstmord",
+  "type": "noun",
+  "pron": "Plural: die Selbstmorde · Genitiv: des Selbstmords / des Selbstmordes · neutraler Fachausdruck: der Suizid",
+  "en": "Suicide. Selbstmorde is the plural. In the source, mehr Selbstmorde is an accusative plural phrase after es gibt (“there are”); mehr does not change its ending. The noun is masculine: der Selbstmord. Der Suizid (plural die Suizide) is a neutral technical alternative, especially in medical and formal reporting.",
+  "cn": "自杀；自杀事件。Selbstmorde 是复数。原句 mehr Selbstmorde 是 es gibt（有……）后的复数第四格词组；mehr 不变形。该名词为阳性：der Selbstmord。der Suizid（复数 die Suizide）是较中性的专业用语，常用于医学或正式报道。",
+  "de": "Der Bericht enthält Statistiken über Selbstmorde.\nIn der Fachsprache verwendet man häufig das Wort Suizid.\nDie Beratungsstelle engagiert sich für die Suizidprävention.",
+  "exen": "The report contains statistics on suicides.\nIn technical language, the word Suizid is often used.\nThe counselling centre is involved in suicide prevention.",
+  "excn": "报告包含自杀事件的统计数据。\n专业用语中常使用 Suizid 这个词。\n这家咨询机构致力于自杀预防工作。",
+  "quizDe": "der Selbstmord",
+  "quizEn": "suicide",
+  "quizCn": "自杀|自杀事件"
+}

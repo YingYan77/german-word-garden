@@ -1,0 +1,22 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Nun konnte ein einziger Junge auf die Tiere aufpassen, während vorher zwanzig Männer auf die Jagd gehen mussten, um ihre Gemeinschaft zu ernähren.",
+  "sourceEn": "Now a single boy could look after the animals, whereas previously twenty men had had to go hunting to feed their community.",
+  "sourceCn": "现在只需一个男孩就能照看动物，而此前二十个男人必须外出狩猎，才能养活他们的群体。",
+  "id": "ernaehren-verb",
+  "word": "ernähren",
+  "type": "verb",
+  "pron": "ernähren → ernährt → ernährte → hat ernährt · nicht trennbar · jemanden ernähren; sich ernähren",
+  "en": "To feed; to nourish; to provide for or support someone. In your sentence, ihre Gemeinschaft ernähren means to feed or provide food for their community. Ernähren takes an accusative object. In um … zu ernähren, zu introduces the infinitive expressing purpose. The prefix er- is inseparable; the participle is ernährt, without ge-. Reflexive sich ernähren means to eat a particular diet or live on something: sich gesund ernähren (to eat healthily).",
+  "cn": "喂养；养活；为某人提供食物或生计。原句 ihre Gemeinschaft ernähren 表示“养活他们的群体”，ernähren 后接第四格宾语。um … zu ernähren 中，zu 引出表示目的的不定式。前缀 er- 不可分；第二分词为 ernährt，不加 ge-。反身形式 sich ernähren 表示以某种方式饮食或以某物为食：sich gesund ernähren（健康饮食）。",
+  "de": "Mit ihrem Einkommen ernährt sie die ganze Familie.\nDie Tiere ernähren sich von Pflanzen.\nIch möchte mich gesünder ernähren.",
+  "exen": "She supports the whole family with her income.\nThe animals feed on plants.\nI would like to eat more healthily.",
+  "excn": "她用自己的收入养活全家。\n这些动物以植物为食。\n我想吃得更健康。",
+  "quizDe": "ernähren",
+  "quizEn": "to feed|to nourish|to provide for|to support",
+  "quizCn": "喂养|养活|供养",
+  "verbPresent": "er ernährt",
+  "verbPast": "er ernährte",
+  "verbPerfect": "er hat ernährt"
+}

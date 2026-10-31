@@ -1,0 +1,22 @@
+{
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "sourceDe": "Dann lernten sie, Tiere zu halten und Früchte anzubauen.",
+  "sourceEn": "Then they learned to keep animals and grow crops.",
+  "sourceCn": "后来，他们学会了饲养动物和种植作物。",
+  "id": "halten-verb",
+  "word": "halten",
+  "type": "verb",
+  "pron": "halten → hält → hielt → hat gehalten · starkes Verb · Tiere halten; etwas halten; der Bus hält",
+  "en": "To hold; to keep (including keeping animals); to stop. In your sentence, Tiere halten means “to keep or raise animals”. Tiere is the accusative plural object. After lernten, the infinitive has zu: sie lernten, Tiere zu halten (they learned to keep animals). Halten is not separable, so zu is a separate word before it. Other uses: eine Tasche halten (to hold a bag), der Bus hält (the bus stops).",
+  "cn": "拿着；保持；饲养；停下。原句 Tiere halten 表示“饲养动物”，Tiere 是复数第四格宾语。lernten 后用带 zu 的不定式：sie lernten, Tiere zu halten（他们学会了饲养动物）。halten 不可分，zu 单独放在动词前面。其他用法：eine Tasche halten（拿着一个包），der Bus hält（公交车停下）。",
+  "de": "Die Familie hält Hühner und Ziegen.\nKannst du bitte meine Tasche halten?\nDer Bus hält vor dem Bahnhof.",
+  "exen": "The family keeps chickens and goats.\nCould you please hold my bag?\nThe bus stops in front of the station.",
+  "excn": "这家人饲养鸡和山羊。\n你能帮我拿一下包吗？\n公交车在火车站前停下。",
+  "quizDe": "halten",
+  "quizEn": "to hold|to keep|to stop",
+  "quizCn": "拿着|保持|饲养|停下",
+  "verbPresent": "er hält",
+  "verbPast": "er hielt",
+  "verbPerfect": "er hat gehalten"
+}

@@ -186,3 +186,68 @@ test('new embedded card merges into saved words with its date and user edits int
  const reloaded=boot(app.store);
  assert.equal(reloaded.run("words.filter(w=>w.id==='bankenviertel-noun').length"),1);
 });
+
+
+function fillDuplicateForm(app,word,type='adj'){
+ const fields=app.get('#form').elements;
+ Object.assign(fields.word,{value:word});fields.type.value=type;
+ fields.en.value='Another meaning';fields.cn.value='另一种含义';fields.de.value='Ein anderes Beispiel.';
+ fields.word.oninput();
+}
+test('duplicate warning appears while typing, ignoring case and extra spaces',()=>{
+ const app=boot();app.run('openEditor()');fillDuplicateForm(app,'  BEWEGT  ');
+ assert.equal(app.get('#duplicate-warning').hidden,false);assert.equal(app.get('#save').disabled,true);
+ assert.match(app.get('#duplicate-matches').innerHTML,/bewegt/);
+ assert.match(app.get('#duplicate-matches').innerHTML,/Moved/);
+});
+test('duplicate comparison normalizes internal whitespace and Unicode text',()=>{
+ const app=boot();assert.equal(app.run("normalizeDuplicateWord('  Ｂｅｗｅｇｔ  ')"),'bewegt');
+ assert.equal(app.run("normalizeDuplicateWord('eine   Reise   wert sein')"),'eine reise wert sein');
+});
+test('save guard blocks duplicates even when submit bypasses the disabled button',()=>{
+ const app=boot(),before=app.run('JSON.stringify(words)');app.run('openEditor()');fillDuplicateForm(app,'bewegt');
+ app.get('#form').onsubmit({preventDefault(){},target:app.get('#form')});
+ assert.equal(app.run('JSON.stringify(words)'),before);assert.equal(app.get('#editor').open,true);
+});
+test('explicit add-anyway saves a separate card without modifying the existing card',()=>{
+ const app=boot(),original=app.run("JSON.stringify(words.find(w=>w.id==='bewegt-adj'))");app.run('openEditor()');fillDuplicateForm(app,'BEWEGT');
+ app.get('#duplicate-allow').onclick();assert.equal(app.get('#save').disabled,false);
+ app.get('#form').onsubmit({preventDefault(){},target:app.get('#form')});
+ assert.equal(app.run('words.length'),seed.length+1);
+ assert.equal(app.run("JSON.stringify(words.find(w=>w.id==='bewegt-adj'))"),original);
+ assert.equal(app.run('words[0].en'),'Another meaning');
+});
+test('edit-existing action opens that entry instead of adding a duplicate',()=>{
+ const app=boot();app.run('openEditor()');fillDuplicateForm(app,'bewegt');
+ app.get('#duplicate-matches').onclick({target:{closest:()=>({dataset:{editDuplicate:'bewegt-adj'}})}});
+ assert.equal(app.run('editing'),'bewegt-adj');assert.equal(app.get('#form').elements.en.value,seed[0].en);
+ assert.equal(app.get('#duplicate-warning').hidden,true);assert.equal(app.get('#save').disabled,false);
+});
+test('different word types remain allowed and changing category updates the warning',()=>{
+ const app=boot();app.run('openEditor()');fillDuplicateForm(app,'bewegt','noun');
+ assert.equal(app.get('#duplicate-warning').hidden,true);assert.equal(app.get('#save').disabled,false);
+ app.get('#form').elements.type.value='adj';app.get('#form').elements.type.onchange();
+ assert.equal(app.get('#duplicate-warning').hidden,false);assert.equal(app.get('#save').disabled,true);
+});
+test('duplicate search includes browser-only cards and ignores notebook filters',()=>{
+ const saved=[...seed,{...seed[0],id:'browser-only',word:'Browserwort'}],app=boot({'wortgarten-offline-words':JSON.stringify(saved)});
+ app.get('#search').value='no matches';app.run("filter='verb';openEditor()");fillDuplicateForm(app,'browserwort');
+ assert.equal(app.get('#duplicate-warning').hidden,false);assert.match(app.get('#duplicate-matches').innerHTML,/Browserwort/);
+});
+test('duplicate permission resets when opening a fresh form or changing the word',()=>{
+ const app=boot();app.run('openEditor()');fillDuplicateForm(app,'bewegt');app.get('#duplicate-allow').onclick();
+ fillDuplicateForm(app,'lebendig');assert.equal(app.get('#save').disabled,true);
+ app.get('#duplicate-allow').onclick();app.run('openEditor()');fillDuplicateForm(app,'lebendig');
+ assert.equal(app.get('#save').disabled,true);
+});
+test('editing an unchanged word does not match itself, but renaming to another entry warns',()=>{
+ const app=boot();app.run("openEditor(words.find(w=>w.id==='bewegt-adj'))");
+ assert.equal(app.get('#duplicate-warning').hidden,true);
+ fillDuplicateForm(app,'lebendig');assert.equal(app.get('#duplicate-warning').hidden,false);
+});
+test('preview escapes saved word and meaning text',()=>{
+ const app=boot();app.run("words.push({...words[0],id:'unsafe-preview',word:'<img src=x>',en:'<b>meaning</b>'});openEditor()");
+ fillDuplicateForm(app,'<img src=x>');const html=app.get('#duplicate-matches').innerHTML;
+ assert.match(html,/&lt;img src=x&gt;/);assert.match(html,/&lt;b&gt;meaning&lt;\/b&gt;/);
+ assert.ok(!html.includes('<img src=x>'));
+});

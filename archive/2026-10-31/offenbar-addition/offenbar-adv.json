@@ -1,0 +1,19 @@
+{
+  "id": "offenbar-adv",
+  "word": "offenbar",
+  "type": "adv",
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "pron": "Adverb: offenbar · anscheinend / offensichtlich, je nach Kontext · keine Endung als Adverb",
+  "en": "Apparently; evidently. Signals that something seems true based on available evidence; the strength can range from “apparently” to “evidently”, depending on context. In your sentence, Und das hatte offenbar seine Vorteile means “And that apparently had its advantages.” Hatte is the simple past of haben. Offenbar comments on the statement and does not take an adjective ending. Seine Vorteile means “its advantages”, referring back to das; the preceding text tells us what das refers to.",
+  "cn": "看来；显然；显然是。表示根据已有迹象作出的判断，语气可从“看来”到“显然”，具体取决于语境。原句 Und das hatte offenbar seine Vorteile 意为“而那样做看来有它的好处”。hatte 是 haben 的过去时。offenbar 在此为副词，对整个判断作补充，不加形容词词尾。seine Vorteile 表示“它的好处”，回指 das；das 具体指什么，需要看上文。",
+  "de": "Sie hat offenbar den Zug verpasst.\nOffenbar gibt es ein Problem mit der Heizung.\nDie neue Methode funktioniert offenbar gut.",
+  "exen": "She has apparently missed the train.\nApparently, there is a problem with the heating.\nThe new method apparently works well.",
+  "excn": "她看来错过了火车。\n看来暖气出了问题。\n这种新方法看来效果不错。",
+  "sourceDe": "Und das hatte offenbar seine Vorteile.",
+  "sourceEn": "And that apparently had its advantages.",
+  "sourceCn": "而那样做看来有它的好处。",
+  "quizDe": "offenbar",
+  "quizEn": "apparently|evidently",
+  "quizCn": "看来|显然"
+}

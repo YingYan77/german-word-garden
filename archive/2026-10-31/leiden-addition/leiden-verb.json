@@ -1,0 +1,22 @@
+{
+  "id": "leiden-verb",
+  "word": "leiden",
+  "type": "verb",
+  "learningLabel": "B1",
+  "addedOn": "2026-10-31",
+  "pron": "leiden → leidet → litt → hat gelitten · starkes Verb · unter + Dativ leiden; an + Dativ leiden",
+  "en": "To suffer; to be adversely affected. Leiden unter + dative describes suffering caused by difficult conditions or burdens: unter Lärm leiden (to suffer from noise). In your sentence, the plural subject Grossstadtbewohner agrees with leiden. Schlechter Luft is dative feminine without an article, hence the adjective ending -er; dem Licht is dative neuter. The relative clause das die Nacht zum Tage macht describes the light: “which turns night into day”. Leiden an + dative is commonly used for illnesses: an einer Krankheit leiden. The past forms are litt and hat gelitten.",
+  "cn": "受苦；遭受；受到不良影响。leiden unter + 第三格 表示因恶劣环境或负担而受苦，如 unter Lärm leiden（饱受噪声之苦）。原句复数主语 Grossstadtbewohner 与动词 leiden 一致。schlechter Luft 是不带冠词的阴性第三格，因此形容词词尾为 -er；dem Licht 是中性第三格。关系从句 das die Nacht zum Tage macht 修饰 Licht，表示“使黑夜变成白昼的光”。leiden an + 第三格 常用于疾病，如 an einer Krankheit leiden（患有某种疾病）。过去时为 litt，完成时为 hat gelitten。",
+  "de": "Die Anwohner leiden unter dem Lärm.\nSie litt lange unter Schlafmangel.\nEr hat viele Jahre an einer chronischen Krankheit gelitten.",
+  "exen": "The local residents suffer from the noise.\nShe suffered from lack of sleep for a long time.\nHe suffered from a chronic illness for many years.",
+  "excn": "附近居民饱受噪声之苦。\n她长期受到睡眠不足的困扰。\n他患有慢性病多年。",
+  "sourceDe": "Aber die Grossstadtbewohner leiden unter schlechter Luft, Lärm und unter dem Licht, das die Nacht zum Tage macht.",
+  "sourceEn": "But big-city residents suffer from poor air quality, noise and the light that turns night into day.",
+  "sourceCn": "但是，大城市居民饱受空气质量差、噪声以及使黑夜变成白昼的灯光之苦。",
+  "quizDe": "leiden",
+  "quizEn": "to suffer|to be adversely affected",
+  "quizCn": "受苦|遭受|受到不良影响",
+  "verbPresent": "er leidet",
+  "verbPast": "er litt",
+  "verbPerfect": "er hat gelitten"
+}
